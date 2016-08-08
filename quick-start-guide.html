@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Quick Start Guide | Harbourmaster Single Sing On (SSO)</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./harbourmaster.html" />
+    
+    
+    <link rel="prev" href="./index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1"
+        data-chapter-title="Quick Start Guide"
+        data-filepath="quick-start-guide.md"
+        data-basepath="."
+        data-revision="Mon Aug 08 2016 18:29:46 GMT+0200 (CEST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        README
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="quick-start-guide.html">
+            
+                
+                    <a href="./quick-start-guide.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Quick Start Guide
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="harbourmaster.html">
+            
+                
+                    <a href="./harbourmaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Harbourmaster
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Usermanager.html">
+            
+                
+                    <a href="./Usermanager.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Usermanager
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="control-center.html">
+            
+                
+                    <a href="./control-center.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Control Center
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="drupalmodule.html">
+            
+                
+                    <a href="./drupalmodule.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Drupal Module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="license.html">
+            
+                
+                    <a href="./license.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        LICENSE
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Harbourmaster Single Sing On (SSO)</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="quick-start-guide">Quick Start Guide</h1>
+<p>Tested on OSX with Docker Toolbox installed. <a href="https://www.docker.com/toolbox" target="_blank">https://www.docker.com/toolbox</a></p>
+<h2 id="create-a-docker-runtime-environment">Create a docker runtime environment</h2>
+<p>Install Toolbox and setup a local docker machine. Docker frequently releases new versions of docker toolbox, therefore this document can only reference the office documentation for creating a local docker environment; see <a href="https://www.docker.com/toolbox" target="_blank">https://www.docker.com/toolbox </a>and <a href="https://docs.docker.com/engine/getstarted/" target="_blank">https://docs.docker.com/engine/getstarted/</a></p>
+<h2 id="add-etchosts-entries">Add /etc/hosts entries</h2>
+<p>Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100</p>
+<pre><code class="lang-bash"><span class="hljs-number">192.168</span>.<span class="hljs-number">99.100</span> usermanager.thunder.dev harbourmaster.thunder.dev controlcenter.thunder.dev
+</code></pre>
+<h2 id="accept-harbourmaster-license">Accept Harbourmaster license</h2>
+<p>How to accept the license: see chapter <a href="harbourmaster.html">Harbourmaster</a></p>
+<h2 id="start-containers-with-dockercompose">Start containers with docker-compose</h2>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> quickstart
+docker-compose up
+</code></pre>
+<h2 id="seed-harbourmaster-tenants">Seed Harbourmaster tenants</h2>
+<p>You need to seed the database and provide an initial admin user password.</p>
+<pre><code class="lang-bash">./seed-harbourmaster.sh
+</code></pre>
+<h1 id="access-the-applications">Access the applications</h1>
+<p>Access the containers using the host names previously added to <em>/etc/hosts</em></p>
+<h2 id="control-center">Control Center</h2>
+<p><a href="http://controlcenter.thunder.dev:49040/" target="_blank">http://controlcenter.thunder.dev:49040/</a></p>
+<p>(username: admin, password: &lt;YOUR_INPUT_DURING_SEED&gt; )</p>
+<h2 id="user-manager">User Manager</h2>
+<p><a href="http://usermanager.thunder.dev/demo/" target="_blank">http://usermanager.thunder.dev/demo/</a></p>
+<h2 id="harbourmaster">Harbourmaster</h2>
+<p><a href="http://harbourmaster.thunder.dev:8080/" target="_blank">http://harbourmaster.thunder.dev:8080/</a></p>
+<h1 id="configure-drupal-module">Configure Drupal Module</h1>
+<p>The installation and configuration is described in the chapter <a href="drupalmodule.html">Drupal Module</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: README"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./harbourmaster.html" class="navigation navigation-next " aria-label="Next page: Harbourmaster"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
