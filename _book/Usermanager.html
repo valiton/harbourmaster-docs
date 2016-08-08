@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Usermanager | Harbourmaster Single Sing On (SSO)</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./control-center.html" />
+    
+    
+    <link rel="prev" href="./harbourmaster.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3"
+        data-chapter-title="Usermanager"
+        data-filepath="Usermanager.md"
+        data-basepath="."
+        data-revision="Mon Aug 08 2016 18:29:46 GMT+0200 (CEST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        README
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="quick-start-guide.html">
+            
+                
+                    <a href="./quick-start-guide.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Quick Start Guide
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="harbourmaster.html">
+            
+                
+                    <a href="./harbourmaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Harbourmaster
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="Usermanager.html">
+            
+                
+                    <a href="./Usermanager.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Usermanager
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="control-center.html">
+            
+                
+                    <a href="./control-center.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Control Center
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="drupalmodule.html">
+            
+                
+                    <a href="./drupalmodule.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Drupal Module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="license.html">
+            
+                
+                    <a href="./license.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        LICENSE
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Harbourmaster Single Sing On (SSO)</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="user-manager">User Manager</h1>
+<h2 id="about">About</h2>
+<p>The usermanager extends the Harbourmaster SSO. It is a dedicated web application where users of the single sign-on can manage their user account.
+<a href="https://hub.docker.com/r/valiton/usermanager/" target="_blank">https://hub.docker.com/r/valiton/usermanager/</a></p>
+<p>The user facing component is the usermanager; its main features are a frontend widget that is embedded in the website, and a backend that sends confirmation emails and communicates with the Harbourmaster.</p>
+<h3 id="features">Features</h3>
+<ul>
+<li>Registration</li>
+<li>Password Recovery</li>
+<li>Login/Social Login</li>
+<li>Logout</li>
+<li><p>My Account</p>
+<ul>
+<li>Change User Data</li>
+<li>Change Avatar</li>
+<li>Change Password</li>
+</ul>
+</li>
+<li><p>Opt-in/double opt-in</p>
+</li>
+<li><p>Newsletter subscription/unsubscribe</p>
+</li>
+</ul>
+<h3 id="backend-application">Backend application</h3>
+<p>The usermanager backend uses the Harbourmaster API to achieve its main tasks.
+The key responsibilities of the usermanager backend are:</p>
+<ul>
+<li><p>User registration</p>
+<ul>
+<li>Send confirmation email</li>
+</ul>
+</li>
+<li><p>User Login</p>
+</li>
+<li><p>Show Profile</p>
+</li>
+<li><p>Edit Profile</p>
+<ul>
+<li>User image resize and upload to Amazon S3</li>
+</ul>
+</li>
+<li><p>Password Reset</p>
+<ul>
+<li>Send password rest email</li>
+</ul>
+</li>
+</ul>
+<h3 id="widgets">Widgets</h3>
+<p>The widgets are easy to embed and customise with JavaScript applications. The Drupal Module already comes with built in integration. For all user cases there is a single widget, making placement on the page very easy. The widgets are responsive based on the twitter bootstrap grid.</p>
+<p>The widgets are based on <a href="http://emberjs.com/" target="_blank">emberjs. </a>Widget Overview:</p>
+<ul>
+<li>Login</li>
+<li>Sign-up</li>
+<li>Request password reset</li>
+<li>Profile</li>
+<li>Confirmation</li>
+<li>Password reset</li>
+</ul>
+<h3 id="compatibility">Compatibility</h3>
+<p>emberjs uses JavaScript prototype Extensions for Array, String and Function. To avoid compatibility issues in custom JavaScript, do not use incompatible JavaScript code.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="configuration">configuration</h3>
+<p>The usermanager uses external Service/APIs, which need to be configured.</p>
+<p>The minimal required configurations for the usermanager are done by ENVIROMENT variables.</p>
+<pre><code class="lang-bash">HARBOURMASTER_USER_KEY=&lt;enter <span class="hljs-number">20</span> hex char&gt;<span class="hljs-comment"># e.g. 32be04fb9495229f3e4f</span>
+HARBOURMASTER_USER_SECRET_KEY=&lt;enter a long password&gt;
+HARBOURMASTER_TENANT=thunder  
+
+EMAIL_FROM=&lt;Name name@thunder.dev&gt; <span class="hljs-comment">#send the emails from this address. Format see https://github.com/nodemailer/nodemailer#address-formatting</span>
+EMAIL_SMTP_HOST=&lt;host&gt; <span class="hljs-comment">#is the hostname or IP address to connect to (defaults to &apos;localhost&apos;)</span>
+EMAIL_SMTP_PORT=&lt;port&gt; <span class="hljs-comment">#is the port to connect to (defaults to 25 or 465)</span>
+EMAIL_SMTP_USER=&lt;user&gt; <span class="hljs-comment">#smtp server user</span>
+EMAIL_SMTP_PASS=&lt;password&gt; <span class="hljs-comment">#smtp server password</span>
+EMAIL_SMTP_SECURE=&lt;<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&gt; <span class="hljs-comment">#if true the connection will only use TLS. If false (the default), TLS may still be upgraded to if available via the STARTTLS command.</span>
+EMAIL_SMTP_IGNORE_TLS=&lt;<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&gt; <span class="hljs-comment">#if this is true and secure is false, TLS will not be used (either to connect, or as a STARwwtion upgrade command).</span>
+
+SSO_COOKIE_DOMAIN=.thunder.dev <span class="hljs-comment">#the domain where the sso cookie lives</span>
+SSO_WIDGET_CORS_DOMAINS=http://www.thunder.dev <span class="hljs-comment">#add your Drupal domain here, comma separated list is possible</span>
+
+BASE_URL=http://usermanager.thunder.dev <span class="hljs-comment">#url where the usermanager will be publically accessible</span>
+FALLBACK_URL=http://www.thunder.dev/ <span class="hljs-comment">#fallback to this url, recommend use the thunder home page, only used in case of miss use by uses</span>
+</code></pre>
+<h3 id="changing-ui-text">Changing UI Text</h3>
+<p>Every Text which get displayed to the user in the frontend widget can be customized. Each UI text is individually addressable in a hierarchical JSON object notation, unlike Drupal, English is not the default text.</p>
+<pre><code>&quot;signup&quot;: {
+  &quot;title&quot;: {
+    &quot;signup&quot;: &quot;Werden Sie Mitglied!&quot;,
+    }
+  }
+}
+</code></pre><p><img src="assets/signup-widget.png" alt=""></p>
+<h4 id="drupal-local-module-interface-translation">Drupal local Module <a href="https://www.drupal.org/documentation/modules/locale" target="_blank">Interface Translation</a></h4>
+<p>The Harbourmaster Drupal Module utilizes the option to use Drupal translations in JavaScript <a href="https://www.drupal.org/node/323109" target="_blank">https://www.drupal.org/node/323109</a></p>
+<p>The Drupal Module contains a de.po and a hms.pot file which can be used to translate all UI text elements.</p>
+<p>All translation strings are prefixed with hms-widget e.g. <code>hms-widget.signup.title.signup</code></p>
+<p>To be able to use this you need:</p>
+<ol>
+<li>to install the <strong>Interface Translation</strong> <a href="https://www.drupal.org/documentation/modules/locale" target="_blank">https://www.drupal.org/documentation/modules/locale</a></li>
+</ol>
+<p><img src="assets/drupal-module-interface-translation.png" alt=""></p>
+<ol>
+<li>Upload the de.po file from the Harbourmaster Drupal Module:
+<img src="assets/drupal-upload-po-file.png" alt=""></li>
+<li>Search UI Text and edit:
+<img src="assets/drupal-edit-translation.png" alt=""></li>
+<li>Flush Drupal cache and reload UI:</li>
+</ol>
+<p><img src="assets/drupal-flush-cache.png" alt=""></p>
+<h4 id="language-file-injection">Language file injection</h4>
+<p>An alternative option is to edit the UI text JSON file and inject it into the docker container.</p>
+<p>The injection uses the docker volume feature to <a href="https://docs.docker.com/v1.10/engine/userguide/containers/dockervolumes/#mount-a-host-file-as-a-data-volume" target="_blank">mount individual host files. </a>Currently the usermanager expects a de.js file, even if it contains English text. Multiple languages are currently not implemented.</p>
+<pre><code>./de.js:/app/assets/languages/de.js
+</code></pre><p>When editing a de.js file remember to restart the docker container, since the files are compiled when the container starts.</p>
+<pre><code>$ docker stop thunder-usermanager
+$ docker start thunder-usermanager
+</code></pre><h3 id="changing-email-templates">Changing email templates</h3>
+<p>The Usermanager sends a multipart email with a text and an html version of the text. Therefore, two files are required for every email template. The email client will pick one version of the text based on email client capability and user preferences. The html email in this example is a very basic html, but could be expanded to a much richer html. Multiple languages are currently not implemented.</p>
+<p>The email templates are created in the <a href="http://www.embeddedjs.com/" target="_blank">ejs template language</a>. Changing the email text requires the injection of the email template files into the docker container.</p>
+<p>The <code>passwordRecoveryHtml.ejs</code> and <code>passwordRecoveryText.ejs</code>  are for sending by email if a user requests a password recovery link.
+The <code>registrationConfirmationHtml.ejs</code>and <code>registrationConfirmationText.ejs</code>are for the account registration confirmation email.</p>
+<pre><code>  ./passwordRecoveryHtml.ejs:/app/views/email/forgotPassword/passwordRecoveryHtml.ejs
+  ./passwordRecoveryText.ejs:/app/views/email/forgotPassword/passwordRecoveryText.ejs
+  ./registrationConfirmationHtml.ejs:/app/views/email/signup/registrationConfirmationHtml.ejs
+./registrationConfirmationText.ejs:/app/views/email/signup/registrationConfirmationText.ejs
+</code></pre><h3 id="skinning">Skinning</h3>
+<p>The widget basic styling and grid rely on the popular <a href="http://getbootstrap.com/" target="_blank">bootstrap </a>CSS framework.
+The <code>hms-widget.css</code> widget css is generated from a set of LESS files.
+Within the generated stylesheet all widget related parts are prefixed with the <code>.hms-widget</code> class declaration to avoid overwriting other parts of the page.</p>
+<p>That is because all imported files are called inside the parent class definition are called:</p>
+<pre><code>.hms-widget {
+    @import ...
+    @import &quot;white-label.less&quot;;
+}
+</code></pre><p>To change the design of the widget you can use one of the following options depending on your knowledge of web technologies:</p>
+<h4 id="drupal-based-css-overwrite">Drupal based CSS overwrite</h4>
+<p>This option describes the adaption of the widget design by replacing predefined values in an existing style sheet.</p>
+<p>The relevant file is located inside the Harbourmaster Drupal plugin folder.
+<a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin</a></p>
+<pre><code>harbourmaster-sso-drupal8-plugin/css/white-label-static.css
+</code></pre><p>It includes a basic set of selector classes to tackle most of the visible form fields.</p>
+<p>Just play around with the property values (colours, sizes, backgrounds) and when finished, simply flush all caches (available from the Drupal admin menu) before reloading your page.</p>
+<h4 id="usermanager-less-injection">Usermanager LESS injection</h4>
+<p>Besides the ability to include a pre-compiled CSS file, we also offer a more advanced option to adapt the look and feel of the widget.</p>
+<p>Any technical savvy developer/designer/site builder can customize the white-label.less file to meet the requirements in regards of CI and existing specifications. The injection uses the docker volume feature to <a href="https://docs.docker.com/v1.10/engine/userguide/containers/dockervolumes/#mount-a-host-file-as-a-data-volume" target="_blank">mount individual host files</a></p>
+<pre><code> ./white-label.less:/app/assets/styles/less/white-label.less
+</code></pre><p>Some basic selector groups have already been included; for further adjustments one can inspect the required DOM nodes in source code view and amend existing class or ID definitions within the style sheet.</p>
+<p>You can change default color, size and font definitions in the variables file located at</p>
+<pre><code>./vars.less:/app/assets/styles/less/vars.less
+</code></pre><p>When editing LESS files, remember to restart the docker container, since the files are compiled when the container starts.</p>
+<pre><code>$ docker start thunder-usermanager
+$ docker start thunder-usermanager
+</code></pre><p>If you decide to go with the LESS file option you can optionally decide not to use the  <code>white-label-static.css</code> from the Drupal Module or comment out all unnecessary declarations from the Drupal Module.</p>
+<h3 id="configure-email-smpt-server">Configure email SMPT server</h3>
+<p>The usermanager uses a SMPT Server to send email. Email will be sent with the <a href="https://github.com/nodemailer/nodemailer" target="_blank">nodemailer </a>npm module. The most common SMTP configurations used are exposed as environment variables.</p>
+<pre><code>EMAIL_FROM=Name name@thunder.dev     #send the mails form this address. Format see https://github.com/nodemailer/nodemailer#address-formatting
+EMAIL_SMTP_HOST=&lt;host&gt;                #is the hostname or IP address to connect to (defaults to &apos;localhost&apos;)
+EMAIL_SMTP_PORT=&lt;port&gt;                #is the port to connect to (defaults to 25 or 465)
+EMAIL_SMTP_USER=&lt;user&gt;                #smtp server user
+EMAIL_SMTP_PASS=&lt;password&gt;            #smtp server password
+EMAIL_SMTP_SECURE=&lt;true|false&gt;        #if true the connection will only use TLS. If false (the default), TLS may still be upgraded to if
+EMAIL_SMTP_IGNORE_TLS=&lt;true|false&gt;    #if this is true and secure is false, TLS will not be used (either to connect, or as a STARTTLS connection upgrade command).
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./harbourmaster.html" class="navigation navigation-prev " aria-label="Previous page: Harbourmaster"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./control-center.html" class="navigation navigation-next " aria-label="Next page: Control Center"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

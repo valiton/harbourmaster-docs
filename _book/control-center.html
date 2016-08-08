@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Control Center | Harbourmaster Single Sing On (SSO)</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./drupalmodule.html" />
+    
+    
+    <link rel="prev" href="./Usermanager.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4"
+        data-chapter-title="Control Center"
+        data-filepath="control-center.md"
+        data-basepath="."
+        data-revision="Mon Aug 08 2016 18:29:46 GMT+0200 (CEST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        README
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="quick-start-guide.html">
+            
+                
+                    <a href="./quick-start-guide.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Quick Start Guide
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="harbourmaster.html">
+            
+                
+                    <a href="./harbourmaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Harbourmaster
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Usermanager.html">
+            
+                
+                    <a href="./Usermanager.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Usermanager
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4" data-path="control-center.html">
+            
+                
+                    <a href="./control-center.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Control Center
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="drupalmodule.html">
+            
+                
+                    <a href="./drupalmodule.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Drupal Module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="license.html">
+            
+                
+                    <a href="./license.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        LICENSE
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Harbourmaster Single Sing On (SSO)</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="control-center-installation">Control Center Installation</h1>
+<h2 id="about">About</h2>
+<p>The controlcenter is a web application which provides an administration interface for the Harbourmaster SSO. It is provided as a docker container. <a href="https://hub.docker.com/r/valiton/controlcenter/" target="_blank">https://hub.docker.com/r/valiton/controlcenter/</a></p>
+<h2 id="configuration">Configuration</h2>
+<p>The necessary configuration of the controlcenter is defined with environment variables.</p>
+<pre><code class="lang-bash">COOKIE_SECURE=&lt;<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&gt;     <span class="hljs-comment">#should set the login cookie only on https</span>
+REDIRECT_TO_HTTPS=&lt;<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&gt; <span class="hljs-comment">#should redirect to https</span>
+HARBOURMASTER_API_URL=&lt;harbourmaster_api_base_url_v1&gt;  <span class="hljs-comment">#Base url of the harbourmaster API inclucding /v1 e.g. http://harbourmaster.thunder.dev:8080/v1</span>
+</code></pre>
+<h1 id="docker-run">Docker run</h1>
+<p>The quick start guide provides a preconfigured docker-compose file. <a href="quick-start-guide.html">Quick Start Guide</a></p>
+<pre><code class="lang-bash">docker run --name thunder-controlcenter <span class="hljs-operator">-e</span> COOKIE_SECURE=<span class="hljs-literal">false</span> <span class="hljs-operator">-e</span> REDIRECT_TO_HTTPS=<span class="hljs-literal">false</span> <span class="hljs-operator">-e</span> HARBOURMASTER_API_URL=http://harbourmaster.thunder.dev:<span class="hljs-number">8080</span>/v1 -p <span class="hljs-number">49040</span>:<span class="hljs-number">18040</span> valiton/controlcenter
+</code></pre>
+<h1 id="control-center-user-documentation">Control Center user documentation</h1>
+<h2 id="login">Login</h2>
+<p>Login with username/password or with user key and user secret key. The user must have the permission <strong>cc:accessUI</strong>. The admin user created in the seed script has complete permission.</p>
+<p><img src="assets/controlcenter_login.png" alt=""></p>
+<h2 id="controlcenter-dash-board">Controlcenter Dash Board</h2>
+<p>On the controlcenter dashboard, select Harbourmaster to manage users.</p>
+<p><img src="assets/controlcenter_dashboard.png" alt=""></p>
+<h2 id="list-users">List Users</h2>
+<p>The Control Center lists all users in paginated form on the left hand side. The list is searchable.</p>
+<p><img src="assets/controlcenter_list_users.png" alt=""></p>
+<h2 id="user-details">User Details</h2>
+<p>The controlcenter shows all user details when clicking on a user from the list. On the user detail page the following admin actions can be done.</p>
+<ul>
+<li>Change password for the user (requires knowledge of the user password)</li>
+<li>Reset password (assign a new randomly generated password to the user, password will be displayed once)</li>
+<li><p>Reset secret key (assign a new randomly generated secret key to the user, secret key will be displayed once)</p>
+</li>
+<li><p>Edit the user details</p>
+</li>
+<li><p>Delete the user</p>
+</li>
+<li><p>Add group to User</p>
+</li>
+<li><p>Remove group from user</p>
+</li>
+<li><p>Add policy to user</p>
+</li>
+<li><p>Remove policy from user</p>
+</li>
+<li><p>Edit user security questions</p>
+</li>
+<li><p>Add entitlement to user</p>
+</li>
+<li><p>Remove entitlement from user</p>
+</li>
+<li><p>OAuth Callback Whitelist (relevant for OAuth API user)</p>
+</li>
+</ul>
+<p><img src="assets/controlcenter_show_user_admin.png" alt=""></p>
+<h2 id="create-new-user">Create new user</h2>
+<p>The controlcenter create user has less validation than the usermanager widget used by internet users. e.g. the usermanager validates that the login name is not a email address, the controlcenter cannot perform this validation.</p>
+<p><strong>Important:</strong> A new user has no default policies and therefore cannot login; you have to add a group to the new user.</p>
+<p><img src="assets/controlcenter_add_user.png" alt=""></p>
+<h2 id="list-groups">List Groups</h2>
+<p>The controlcenter list all groups.</p>
+<p><img src="assets/controlcenter_list_group.png" alt=""></p>
+<h2 id="create-new-group">Create new Group</h2>
+<p>Create a new group for a tenant. Group names should not contain any whitespaces.</p>
+<p><img src="assets/controlcenter_add_group.png" alt=""></p>
+<h2 id="create-new-policy-in--group-or-user">Create new Policy in  Group OR User</h2>
+<p>Create a new policy. The UI represents the policy statements JSON structure as described in the <a href="harbourmaster.html#Policies">Harbourmaster Policies</a>.</p>
+<p><img src="assets/controlcenter_add_policy.png" alt=""></p>
+<h2 id="list-tenants">List tenants</h2>
+<p>List the tenants. All Harbourmaster entities such as users and groups are attached to one and only one tenant. A move from one tenant on other list not supported. In other words, a tenant represents one set of users.</p>
+<p><img src="assets/controlcenter_list_tenant.png" alt=""></p>
+<h2 id="show-tenant">Show tenant</h2>
+<p>Show the details of a tenant.</p>
+<p><img src="assets/controlcenter_show_tenant.png" alt=""></p>
+<h2 id="create-new-tenant">Create new tenant</h2>
+<p>Create a new tenant and define the API path, which will be used in the Harbourmaster API, as well as a name. Sub-domain configuration gets ignored at this stage.</p>
+<p>Please note: a new tenant comes with no groups, no policies, no admin user. As a admin user with cross tenant access you have to create all necessary information. The initial tenant is created by the seed script which also creates a basic set of groups and policies.</p>
+<p><img src="assets/controlcenter_add_tenant.png" alt=""></p>
+<h2 id="edit-tenant">Edit Tenant</h2>
+<p>The controlcenter allows the editing of a tenant; <strong>please use with caution as </strong>this can break access policies, and API access.</p>
+<p>We do not recommend editing a tenant.</p>
+<p><img src="assets/controlcenter_edit_tenant.png" alt=""></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./Usermanager.html" class="navigation navigation-prev " aria-label="Previous page: Usermanager"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./drupalmodule.html" class="navigation navigation-next " aria-label="Next page: Drupal Module"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

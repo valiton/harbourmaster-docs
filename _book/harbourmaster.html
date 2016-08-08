@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Harbourmaster | Harbourmaster Single Sing On (SSO)</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./Usermanager.html" />
+    
+    
+    <link rel="prev" href="./quick-start-guide.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2"
+        data-chapter-title="Harbourmaster"
+        data-filepath="harbourmaster.md"
+        data-basepath="."
+        data-revision="Mon Aug 08 2016 18:29:46 GMT+0200 (CEST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        README
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="quick-start-guide.html">
+            
+                
+                    <a href="./quick-start-guide.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Quick Start Guide
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2" data-path="harbourmaster.html">
+            
+                
+                    <a href="./harbourmaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Harbourmaster
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Usermanager.html">
+            
+                
+                    <a href="./Usermanager.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Usermanager
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="control-center.html">
+            
+                
+                    <a href="./control-center.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Control Center
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="drupalmodule.html">
+            
+                
+                    <a href="./drupalmodule.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Drupal Module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="license.html">
+            
+                
+                    <a href="./license.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        LICENSE
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Harbourmaster Single Sing On (SSO)</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="harbourmater">Harbourmater</h1>
+<h2 id="about">About</h2>
+<p>The Harbourmaster application is the backbone of the Harbourmaster SSO. It provides the API which powers all other applications.
+<a href="https://hub.docker.com/r/valiton/harbourmaster/" target="_blank">https://hub.docker.com/r/valiton/harbourmaster/</a></p>
+<p>Its main API is the REST API, which contains a full documentation with Swagger: <a href="http://YOUR_HARBOURMASTER_URL/docs" target="_blank">http://YOUR_HARBOURMASTER_URL/docs</a></p>
+<p>As well as the Rest API, it provides a change notification mechanism that allows notifications to be received for example, when a user changes their profile data (not included in the Freemium version).</p>
+<p>The Harbourmaster stores data in a <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>.</p>
+<h3 id="modular-architecture">Modular Architecture</h3>
+<p>The Harbourmaster comprises a core module and a couple of feature extending modules listed. Not all modules are include in the Freemium version.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Module Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">In Freemium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">harbourmaster</td>
+<td style="text-align:left">Core module with all API required for basic SSO</td>
+<td style="text-align:left">YES</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-user-confirmable</td>
+<td style="text-align:left">Adds API for user registration confirmation</td>
+<td style="text-align:left">YES</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-user-tokens</td>
+<td style="text-align:left">Adds API to assign tokens to users, used in combination with mobile SDK</td>
+<td style="text-align:left">YES</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-anonymous-sessions</td>
+<td style="text-align:left">Adds API for handling anonymous sessions</td>
+<td style="text-align:left">YES</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-oauth2</td>
+<td style="text-align:left">Adds OAuth2 API</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-purchases</td>
+<td style="text-align:left">Adds API to assign purchases (paid one time) to users</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-entitlements</td>
+<td style="text-align:left">Adds API to assign entitlements (paid subscription) to users</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-entitlements-postentitlement-ciscom-crm</td>
+<td style="text-align:left">Adds API to check subscription status with a external ciscom CRM</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-notificator-kinesis</td>
+<td style="text-align:left">Adds change notifications using AWS Kinesis</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-notificator-sqs</td>
+<td style="text-align:left">Adds change notifications using AWS SQS</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-notificator-redis-sentinel</td>
+<td style="text-align:left">Adds change notifications using Redis, also Redis Sentinel compatible</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-managed-subscriptions</td>
+<td style="text-align:left">Adds API to manage newsletter subscription and advertisement permissions, one tenant can have one newsletter account</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:left">hms-module-multiclient-subscriptions</td>
+<td style="text-align:left">Adds API to manage newsletter subscription and advertisement permissions, one tenant can have multiple newsletter accounts</td>
+<td style="text-align:left">NO</td>
+</tr>
+</tbody>
+</table>
+<h2 id="license">License</h2>
+<p>The Harbourmaster Freemium is licensed under the attached <a href="license.html">LICENSE</a>.</p>
+<p>To start the Harbourmaster you need to accept the license by passing the LICENSE=accept, to display the license pass LICENSE=view</p>
+<pre><code class="lang-bash">LICENSE=&lt;accept|view&gt;
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>The necessary configuration of the Harbourmaster is defined with environment variables. </p>
+<pre><code class="lang-bash">LICENSE=&lt;accept|view&gt;
+
+REDIS_PORT_6379_TCP_ADDR=&lt;ip of redis&gt;  <span class="hljs-comment">#compatible with docker link redis</span>
+REDIS_PORT_6379_TCP_PORT=&lt;prot of redis&gt; <span class="hljs-comment">#compatible with docker link redis</span>
+
+MONGO_PORT_27017_TCP_ADDR=&lt;ip of mongodb&gt; <span class="hljs-comment">#compatible with docker link mongo</span>
+MONGO_PORT_27017_TCP_PORT=&lt;prot of mongodb&gt; <span class="hljs-comment">#compatible with docker link mongo </span>
+
+
+<span class="hljs-comment"># used for seed script run, shared values with usermanger </span>
+HARBOURMASTER_TENANT=&lt;teante name &gt; e.g. thunder
+USERMANAGER_HMS_USER_KEY=&lt;usermanager key| <span class="hljs-number">20</span> char hex format&gt; e.g.  <span class="hljs-number">32</span>be04fb9495229f3e4f
+USERMANAGER_HMS_USER_SECRET_KEY=&lt;usermanager secret key random string&gt; e.g. <span class="hljs-number">58</span>c94af9f955eebebaf81195d57f774fe7a9d834efd519c8588d184914ff
+</code></pre>
+<h2 id="docker-run">Docker run</h2>
+<p>Start a mongodb and redis as a container</p>
+<pre><code class="lang-bash">docker run <span class="hljs-operator">-d</span> --name=mongo mongo:<span class="hljs-number">3.2</span>
+docker run <span class="hljs-operator">-d</span> --name=redis redis
+</code></pre>
+<p>Start the Harbourmaster server</p>
+<pre><code class="lang-bash">docker run --name=thunder-harbourmaster -it <span class="hljs-operator">-e</span> LICENSE=accept --link mongo:mongo --link redis:redis docker pull valiton/harbourmaster
+</code></pre>
+<p>Seed the mongodb with an initial data set; this is necessary because all API endpoints need a logged in user. The seedscript creates the initial user. </p>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> -it thunder-harbourmaster bash -c <span class="hljs-string">&quot;node /app/scripts/seed-create-thunder-tanent.js&quot;</span>
+</code></pre>
+<h2 id="backup">Backup</h2>
+<p>it is strongly recomended to make backups of the mongodb.
+the quickstart contains a backup script which can be used as a starting point to create a backup for the mongodb <a href="https://github.com/valiton/harbourmaster-docs/blob/master/quickstart/mongodb_backup.sh" target="_blank">https://github.com/valiton/harbourmaster-docs/blob/master/quickstart/mongodb_backup.sh</a></p>
+<p>It is recomend to use a cronjob to run the backup repeatedly.  </p>
+<h2 id="api">API</h2>
+<p>The Harbourmaster provides a HTTP REST API. Its main API is the REST API, which is full documents with swagger. http://<HARBOURMASTER>/docs</HARBOURMASTER></p>
+<p>The basic API structure example:</p>
+<pre><code class="lang-bash">&lt;server&gt; domain <span class="hljs-built_in">where</span> the harbourmaster is deployed to.
+&lt;TENANT&gt; placeholder <span class="hljs-keyword">for</span> the tenant to be used.
+&lt;resource&gt; placeholder <span class="hljs-keyword">for</span> the resource to be used.
+&lt;nestedResource&gt; placeholder <span class="hljs-keyword">for</span> a nested resource.
+
+http://&lt;server&gt;/v1/&lt;TENANT&gt;/&lt;resource&gt;
+http://&lt;server&gt;/v1/&lt;TENANT&gt;/&lt;resource&gt;/&lt;ID&gt;
+http://&lt;server&gt;/v1/&lt;TENANT&gt;/&lt;resource&gt;/&lt;ID&gt;/&lt;nestedResource&gt;
+</code></pre>
+<h3 id="api-responses">API responses</h3>
+<h4 id="positive-response">Positive response</h4>
+<p>All positive responses have this general JSON structure:</p>
+<pre><code class="lang-json">{
+ <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">1</span>,
+ <span class="hljs-string">&quot;responseCode&quot;</span>:  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">HTTP_RESPONSE_CODE</span>&gt;</span>,
+ &quot;data&quot;: { <span class="hljs-tag">&lt;<span class="hljs-title">DATA</span>&gt;</span> }
+}
+</span></code></pre>
+<h4 id="error-response">Error response</h4>
+<p>All error responses have this general JSON structure:</p>
+<pre><code class="lang-json">{
+ <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">0</span>,
+ <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;&lt;MESSAGE&gt;&quot;</span>,
+ <span class="hljs-string">&quot;responseCode&quot;</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">HTTP_RESPONSE_CODE</span>&gt;</span>
+}
+</span></code></pre>
+<h2 id="policies">Policies</h2>
+<p>Policies in the Harbourmaster are a very flexible way to grant access to resources in the Harbourmaster. The policy system is loosely inspired by the <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#policy-syntax" target="_blank">Amazon AWS IAM policies</a>.</p>
+<p>All Harbourmaster API endpoints verify access based on the policy of the requesting user.</p>
+<p>The API endpoint is represented as action and the resource, depending on the context of the created/updated/shown/deleted data.</p>
+<p>The actions and resources involved in the Harbourmaster API are listed in the swagger documentation.</p>
+<p>A Policy consists of one or many statements, which are structured as follows:</p>
+<ul>
+<li><strong>Effect</strong>: can be Allow or Deny</li>
+<li><strong>Tenant</strong>: the tenant where the policy should apply; gets converted in a regular expression</li>
+<li><strong>Action</strong>: represents an API endpoint action; gets converted in a regular expression</li>
+<li><strong>Resource</strong>: the resource which is affected by the action; get converted in a regular expression<ul>
+<li>Special Resource <strong>[currentUser] </strong>access is only granted to the resource owned by the accessing user</li>
+</ul>
+</li>
+</ul>
+<h3 id="policy-example">Policy Example</h3>
+<p><strong>Full access</strong> to all actions on all resource in all tenants:</p>
+<pre><code class="lang-json">{<span class="hljs-string">&quot;Statement&quot;</span>:[
+ {<span class="hljs-string">&quot;Tenant&quot;</span>:<span class="hljs-string">&quot;*&quot;</span>, <span class="hljs-string">&quot;Effect&quot;</span>:<span class="hljs-string">&quot;Allow&quot;</span>,<span class="hljs-string">&quot;Action&quot;</span>:<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;Resource&quot;</span>:<span class="hljs-string">&quot;*&quot;</span>}
+]}
+</code></pre>
+<p><strong>currentUser </strong>User can read and edit his own data</p>
+<pre><code class="lang-json">{ <span class="hljs-string">&quot;Statement&quot;</span>: [
+ { <span class="hljs-string">&quot;Tenant&quot;</span>: <span class="hljs-string">&quot;thunder&quot;</span>, <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>, <span class="hljs-string">&quot;Action&quot;</span>: <span class="hljs-string">&quot;hms:login&quot;</span>, <span class="hljs-string">&quot;Resource&quot;</span>: <span class="hljs-string">&quot;[currentUser]&quot;</span> },
+ { <span class="hljs-string">&quot;Tenant&quot;</span>: <span class="hljs-string">&quot;thunder&quot;</span>, <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>, <span class="hljs-string">&quot;Action&quot;</span>: <span class="hljs-string">&quot;hms:updateUserPassword&quot;</span>, <span class="hljs-string">&quot;Resource&quot;</span>: <span class="hljs-string">&quot;[currentUser]&quot;</span> },
+ { <span class="hljs-string">&quot;Tenant&quot;</span>: <span class="hljs-string">&quot;thunder&quot;</span>, <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>, <span class="hljs-string">&quot;Action&quot;</span>: <span class="hljs-string">&quot;hms:getUserServices&quot;</span>, <span class="hljs-string">&quot;Resource&quot;</span>: <span class="hljs-string">&quot;[currentUser]&quot;</span> },
+ { <span class="hljs-string">&quot;Tenant&quot;</span>: <span class="hljs-string">&quot;thunder&quot;</span>, <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>, <span class="hljs-string">&quot;Action&quot;</span>: <span class="hljs-string">&quot;hms:getUser&quot;</span>, <span class="hljs-string">&quot;Resource&quot;</span>: <span class="hljs-string">&quot;[currentUser]&quot;</span> },
+ { <span class="hljs-string">&quot;Tenant&quot;</span>: <span class="hljs-string">&quot;thunder&quot;</span>, <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>, <span class="hljs-string">&quot;Action&quot;</span>: <span class="hljs-string">&quot;hms:updateUser&quot;</span>, <span class="hljs-string">&quot;Resource&quot;</span>: <span class="hljs-string">&quot;[currentUser]&quot;</span> },
+ { <span class="hljs-string">&quot;Tenant&quot;</span>: <span class="hljs-string">&quot;thunder&quot;</span>, <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>, <span class="hljs-string">&quot;Action&quot;</span>: <span class="hljs-string">&quot;hms:listUserEntitlements&quot;</span>, <span class="hljs-string">&quot;Resource&quot;</span>: <span class="hljs-string">&quot;[currentUser]&quot;</span> },
+ { <span class="hljs-string">&quot;Tenant&quot;</span>: <span class="hljs-string">&quot;thunder&quot;</span>, <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>, <span class="hljs-string">&quot;Action&quot;</span>: <span class="hljs-string">&quot;hms:listAllowedTenants&quot;</span>, <span class="hljs-string">&quot;Resource&quot;</span>: <span class="hljs-string">&quot;[currentUser]&quot;</span> }
+]}
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./quick-start-guide.html" class="navigation navigation-prev " aria-label="Previous page: Quick Start Guide"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./Usermanager.html" class="navigation navigation-next " aria-label="Next page: Usermanager"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

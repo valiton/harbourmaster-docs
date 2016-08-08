@@ -1,0 +1,59 @@
+mongodb:
+  image: mongo:3.2
+  ports:
+    - "27017:27017"
+
+
+redis:
+  container_name: redis
+  image: redis
+  ports:
+    - "6379:6379"
+
+
+thunder-controlcenter:
+  container_name: thunder-controlcenter
+  image: valiton/controlcenter
+  environment:
+    COOKIE_SECURE: "false"
+    REDIRECT_TO_HTTPS: "false"
+    HARBOURMASTER_API_URL: http://harbourmaster.thunder.dev:8080/v1
+  ports:
+    - "49040:18040"
+
+
+thunder-usermanager:
+  container_name: thunder-usermanager
+  image: valiton/usermanager
+  environment:
+    NODE_ENV: docker-compose
+  env_file:
+    - ./usermananger_config.env
+    - ./shared_config.env
+
+  ports:
+    - "80:80"
+  links:
+    - thunder-harbourmaster:harbourmaster
+    - redis:redis
+  volumes:
+    - ./usermanager/vars.less:/app/assets/styles/less/vars.less
+    - ./usermanager/white-label.less:/app/assets/styles/less/white-label.less
+    - ./usermanager/de.js:/app/assets/languages/de.js
+    - ./usermanager/passwordRecoveryHtml.ejs:/app/views/email/forgotPassword/passwordRecoveryHtml.ejs
+    - ./usermanager/passwordRecoveryText.ejs:/app/views/email/forgotPassword/passwordRecoveryText.ejs
+    - ./usermanager/registrationConfirmationHtml.ejs:/app/views/email/signup/registrationConfirmationHtml.ejs
+    - ./usermanager/registrationConfirmationText.ejs:/app/views/email/signup/registrationConfirmationText.ejs
+
+
+thunder-harbourmaster:
+  container_name: thunder-harbourmaster
+  image: valiton/harbourmaster
+  env_file:
+    - ./shared_config.env
+  ports:
+    - "8080:80"
+  links:
+    - mongodb:mongo
+    - redis:redis
+
