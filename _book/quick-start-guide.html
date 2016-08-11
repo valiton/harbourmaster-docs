@@ -53,7 +53,7 @@
         data-chapter-title="Quick Start Guide"
         data-filepath="quick-start-guide.md"
         data-basepath="."
-        data-revision="Mon Aug 08 2016 18:29:46 GMT+0200 (CEST)"
+        data-revision="Thu Aug 11 2016 10:16:19 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -209,22 +209,26 @@
 <p>Tested on OSX with Docker Toolbox installed. <a href="https://www.docker.com/toolbox" target="_blank">https://www.docker.com/toolbox</a></p>
 <h2 id="create-a-docker-runtime-environment">Create a docker runtime environment</h2>
 <p>Install Toolbox and setup a local docker machine. Docker frequently releases new versions of docker toolbox, therefore this document can only reference the office documentation for creating a local docker environment; see <a href="https://www.docker.com/toolbox" target="_blank">https://www.docker.com/toolbox </a>and <a href="https://docs.docker.com/engine/getstarted/" target="_blank">https://docs.docker.com/engine/getstarted/</a></p>
-<h2 id="add-etchosts-entries">Add /etc/hosts entries</h2>
-<p>Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100</p>
-<pre><code class="lang-bash"><span class="hljs-number">192.168</span>.<span class="hljs-number">99.100</span> usermanager.thunder.dev harbourmaster.thunder.dev controlcenter.thunder.dev
+<h2 id="clone-the-harbourmasterdocs-repo-and-switch-to-the-quickstart-folder">Clone the harbourmaster-docs repo and switch to the quickstart folder</h2>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/valiton/harbourmaster-docs.git
+<span class="hljs-built_in">cd</span> harbourmaster-docs/quickstart/
 </code></pre>
 <h2 id="accept-harbourmaster-license">Accept Harbourmaster license</h2>
 <p>How to accept the license: see chapter <a href="harbourmaster.html">Harbourmaster</a></p>
+<p>For the quickstart guide file <code>shared_config.env</code> contains the line <code>LICENSE=accept</code> this allread accepts the licese for the quickstart guide run.</p>
 <h2 id="start-containers-with-dockercompose">Start containers with docker-compose</h2>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> quickstart
-docker-compose up
+<pre><code class="lang-bash">docker-compose up
 </code></pre>
 <h2 id="seed-harbourmaster-tenants">Seed Harbourmaster tenants</h2>
 <p>You need to seed the database and provide an initial admin user password.</p>
 <pre><code class="lang-bash">./seed-harbourmaster.sh
 </code></pre>
+<h2 id="add-etchosts-entries">Add /etc/hosts entries</h2>
+<p>Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100. 
+Get your docker mashine ip with <code>docker-machine ip</code></p>
+<pre><code class="lang-bash"><span class="hljs-number">192.168</span>.<span class="hljs-number">99.100</span> usermanager.thunder.dev harbourmaster.thunder.dev controlcenter.thunder.dev
+</code></pre>
 <h1 id="access-the-applications">Access the applications</h1>
-<p>Access the containers using the host names previously added to <em>/etc/hosts</em></p>
 <h2 id="control-center">Control Center</h2>
 <p><a href="http://controlcenter.thunder.dev:49040/" target="_blank">http://controlcenter.thunder.dev:49040/</a></p>
 <p>(username: admin, password: &lt;YOUR_INPUT_DURING_SEED&gt; )</p>

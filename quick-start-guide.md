@@ -6,22 +6,26 @@ Tested on OSX with Docker Toolbox installed. [https://www.docker.com/toolbox](ht
 
 Install Toolbox and setup a local docker machine. Docker frequently releases new versions of docker toolbox, therefore this document can only reference the office documentation for creating a local docker environment; see [https://www.docker.com/toolbox ](https://www.docker.com/toolbox)and [https://docs.docker.com/engine/getstarted/](https://docs.docker.com/engine/getstarted/)
 
-## Add /etc/hosts entries
 
-Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100
+
+## Clone the harbourmaster-docs repo and switch to the quickstart folder
 
 ```bash
-192.168.99.100 usermanager.thunder.dev harbourmaster.thunder.dev controlcenter.thunder.dev
+git clone https://github.com/valiton/harbourmaster-docs.git
+cd harbourmaster-docs/quickstart/
 ```
+
 
 ## Accept Harbourmaster license
 
 How to accept the license: see chapter [Harbourmaster](/harbourmaster.md)
 
+For the quickstart guide file ```shared_config.env``` contains the line ```LICENSE=accept``` this allread accepts the licese for the quickstart guide run.
+
+
 ## Start containers with docker-compose
 
 ```bash
-cd quickstart
 docker-compose up
 ```
 
@@ -33,9 +37,18 @@ You need to seed the database and provide an initial admin user password.
 ./seed-harbourmaster.sh
 ```
 
+## Add /etc/hosts entries
+
+Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100. 
+Get your docker mashine ip with ```docker-machine ip```
+
+```bash
+192.168.99.100 usermanager.thunder.dev harbourmaster.thunder.dev controlcenter.thunder.dev
+```
+
+
 # Access the applications
 
-Access the containers using the host names previously added to _/etc/hosts_
 
 ## Control Center
 
