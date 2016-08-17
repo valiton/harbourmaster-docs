@@ -33,7 +33,7 @@ Some of the main strengths of SSO are:
 
 * Android SDK \(not available in Freemium\)
 
-* Cross Domain login/logout 
+* Cross Domain login/logout  \(not available in Freemium\)
 * Login with Facebook, Twitter, Google Plus et al
 * API Driven – all functions can also be accessed by third-party systems via API
 * Customer self-service widget  

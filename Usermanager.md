@@ -3,7 +3,7 @@
 ## About
 
 The usermanager extends the Harbourmaster SSO. It is a dedicated web application where users of the single sign-on can manage their user account.
-https://hub.docker.com/r/valiton/usermanager/
+[https:\/\/hub.docker.com\/r\/valiton\/usermanager\/](https://hub.docker.com/r/valiton/usermanager/)
 
 The user facing component is the usermanager; its main features are a frontend widget that is embedded in the website, and a backend that sends confirmation emails and communicates with the Harbourmaster.
 
@@ -11,7 +11,7 @@ The user facing component is the usermanager; its main features are a frontend w
 
 * Registration
 * Password Recovery
-* Login/Social Login
+* Login\/Social Login
 * Logout
 * My Account
 
@@ -19,9 +19,9 @@ The user facing component is the usermanager; its main features are a frontend w
   * Change Avatar
   * Change Password
 
-* Opt-in/double opt-in
+* Opt-in\/double opt-in
 
-* Newsletter subscription/unsubscribe
+* Newsletter subscription\/unsubscribe
 
 
 ### Backend application
@@ -67,11 +67,15 @@ emberjs uses JavaScript prototype Extensions for Array, String and Function. To 
 
 ### configuration
 
-The usermanager uses external Service/APIs, which need to be configured.
+The usermanager uses external Service\/APIs, which need to be configured.
 
 The minimal required configurations for the usermanager are done by ENVIROMENT variables.
 
+**usermanager.env **file for docker run
+
 ```bash
+#usermanager.env
+
 HARBOURMASTER_USER_KEY=<enter 20 hex char># e.g. 32be04fb9495229f3e4f
 HARBOURMASTER_USER_SECRET_KEY=<enter a long password>
 HARBOURMASTER_TENANT=thunder  
@@ -91,6 +95,14 @@ BASE_URL=http://usermanager.thunder.dev #url where the usermanager will be publi
 FALLBACK_URL=http://www.thunder.dev/ #fallback to this url, recommend use the thunder home page, only used in case of miss use by uses
 ```
 
+### Docker Run
+
+Requires a runing harbourmaster and redis container to link to
+
+```bash
+docker run -name usermanager --port 80:80 --link thunder-harbourmaster:harbourmaster -- link  redis:redis --env-file usermanager.env -e NODE_ENV=docker-compose  valiton/usermanager
+```
+
 ### Changing UI Text
 
 Every Text which get displayed to the user in the frontend widget can be customized. Each UI text is individually addressable in a hierarchical JSON object notation, unlike Drupal, English is not the default text.
@@ -108,14 +120,14 @@ Every Text which get displayed to the user in the frontend widget can be customi
 
 #### Drupal local Module [Interface Translation](https://www.drupal.org/documentation/modules/locale)
 
-The Harbourmaster Drupal Module utilizes the option to use Drupal translations in JavaScript [https://www.drupal.org/node/323109](https://www.drupal.org/node/323109)
+The Harbourmaster Drupal Module utilizes the option to use Drupal translations in JavaScript [https:\/\/www.drupal.org\/node\/323109](https://www.drupal.org/node/323109)
 
 The Drupal Module contains a de.po and a hms.pot file which can be used to translate all UI text elements.
 
 All translation strings are prefixed with hms-widget e.g. `hms-widget.signup.title.signup`
 
 To be able to use this you need:
-1. to install the **Interface Translation** [https://www.drupal.org/documentation/modules/locale](https://www.drupal.org/documentation/modules/locale)
+1. to install the **Interface Translation** [https:\/\/www.drupal.org\/documentation\/modules\/locale](https://www.drupal.org/documentation/modules/locale)
 
 ![](assets/drupal-module-interface-translation.png)
 2. Upload the de.po file from the Harbourmaster Drupal Module:
@@ -181,7 +193,7 @@ To change the design of the widget you can use one of the following options depe
 This option describes the adaption of the widget design by replacing predefined values in an existing style sheet.
 
 The relevant file is located inside the Harbourmaster Drupal plugin folder.
-[https://github.com/valiton/harbourmaster-sso-drupal8-plugin](https://github.com/valiton/harbourmaster-sso-drupal8-plugin)
+[https:\/\/github.com\/valiton\/harbourmaster-sso-drupal8-plugin](https://github.com/valiton/harbourmaster-sso-drupal8-plugin)
 
 ```
 harbourmaster-sso-drupal8-plugin/css/white-label-static.css
@@ -195,7 +207,7 @@ Just play around with the property values \(colours, sizes, backgrounds\) and wh
 
 Besides the ability to include a pre-compiled CSS file, we also offer a more advanced option to adapt the look and feel of the widget.
 
-Any technical savvy developer/designer/site builder can customize the white-label.less file to meet the requirements in regards of CI and existing specifications. The injection uses the docker volume feature to [mount individual host files](https://docs.docker.com/v1.10/engine/userguide/containers/dockervolumes/#mount-a-host-file-as-a-data-volume)
+Any technical savvy developer\/designer\/site builder can customize the white-label.less file to meet the requirements in regards of CI and existing specifications. The injection uses the docker volume feature to [mount individual host files](https://docs.docker.com/v1.10/engine/userguide/containers/dockervolumes/#mount-a-host-file-as-a-data-volume)
 
 ```
  ./white-label.less:/app/assets/styles/less/white-label.less
@@ -231,3 +243,4 @@ EMAIL_SMTP_PASS=<password>            #smtp server password
 EMAIL_SMTP_SECURE=<true|false>        #if true the connection will only use TLS. If false (the default), TLS may still be upgraded to if
 EMAIL_SMTP_IGNORE_TLS=<true|false>    #if this is true and secure is false, TLS will not be used (either to connect, or as a STARTTLS connection upgrade command).
 ```
+

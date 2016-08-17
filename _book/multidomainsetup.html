@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>README | Harbourmaster Single Sing On (SSO)</title>
+        <title>MultiDomainSetup | Harbourmaster Single Sing On (SSO)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="With the Harbourmaster Single Sign On (SSO), Valiton has developed a solution that focuses on the media industry. As part of the Thunder initiative of Hubert Burda Media, the Harbourmaster is available as a ‘Freemium’ version.">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
         
         
@@ -37,8 +37,8 @@
         
     
     
-    <link rel="next" href="./quick-start-guide.html" />
     
+    <link rel="prev" href="./license.html" />
     
 
         
@@ -47,9 +47,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="README"
-        data-filepath="README.md"
+        data-level="7"
+        data-chapter-title="MultiDomainSetup"
+        data-filepath="multidomainsetup.md"
         data-basepath="."
         data-revision="Wed Aug 17 2016 22:26:26 GMT+0200 (CEST)"
         data-innerlanguage="">
@@ -67,7 +67,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -170,7 +170,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7" data-path="multidomainsetup.html">
+        <li class="chapter active" data-level="7" data-path="multidomainsetup.html">
             
                 
                     <a href="./multidomainsetup.html">
@@ -218,59 +218,34 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="harbourmaster-single-sing-on-sso">Harbourmaster Single Sing On (SSO)</h1>
-<p>With the Harbourmaster Single Sign On (SSO), <a href="https://valiton.com/" target="_blank">Valiton </a>has developed a solution that focuses on the media industry. As part of the <a href="http://www.thunder.org/" target="_blank">Thunder </a>initiative of Hubert Burda Media, the Harbourmaster is available as a &#x2018;Freemium&#x2019; version.</p>
-<p>Whether for registered users, newsletter subscribers or anonymous users &#x2013; all types of visitors on websites, online shops and apps, Single Sign On is essential for online businesses.</p>
-<p>Thunder comes with built in Drupal User Management, which could be used as long you only need to allow users to login on your website. For your Mobile App, you may have considered registering via Facebook or Twitter.</p>
-<p>With the rapid growth of your online business, and the use of various apps, websites, shops, and landing pages, the need for a Single Sign On solution has now become essential.</p>
-<p>Some of the main strengths of SSO are:</p>
-<ul>
-<li><p>Private Hosting</p>
-<ul>
-<li>Cloud scaling compatibility </li>
-<li>Hosting friendly by using <a href="https://www.docker.com/" target="_blank">Docker</a> container</li>
-</ul>
-</li>
-<li><p>Multi-tenant (two tenants included in Freemium)</p>
-</li>
-<li><p>Newsletter Management (not available in Freemium)</p>
-<ul>
-<li>Subscription status Sync with email service providers (Salesforce Marketing Cloud, Elaine, etc)</li>
-<li>Integration of subscribers&apos; status</li>
-</ul>
-</li>
-<li><p>Management of data protection and advertising agreement</p>
-</li>
-<li><p>Paid content access control (billing component requires the Valiton product, Tallymann)</p>
-<ul>
-<li>CDN/Caching compatibility </li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>iOS SDK (not available in Freemium)</p>
-</li>
-<li><p>Android SDK (not available in Freemium)</p>
-</li>
-<li><p>Cross Domain login/logout  (not available in Freemium)</p>
-</li>
-<li>Login with Facebook, Twitter, Google Plus et al</li>
-<li>API Driven &#x2013; all functions can also be accessed by third-party systems via API</li>
-<li>Customer self-service widget  </li>
-</ul>
-<p>Valiton&#x2019;s many years of development experience in <a href="https://nodejs.org/" target="_blank">NodeJS </a>was the base on which it implemented the applications in the Harbourmaster SSO and developed a fast and resource-efficient SSO solution as a loosely coupled architecture. Harbourmaster is also the central component for access management of premium content on publishing sites. We can perfectly apply our know-how in the field of online shops and mobile apps into the integration of third party systems.</p>
-<p>For more information about Harbourmaster SSO please feel free to contact us directly. <a href="mailto:kontakt@valiton.com" target="_blank">kontakt@valiton.com</a></p>
-<h2 id="system-components">System Components</h2>
-<p><img src="assets/system_components.jpg" alt=""></p>
-<p>The Harbourmaster SSO contains three components in the Freemium version of Thunder. The Freemium version is under the attached LICENSE.</p>
-<p>The Core component is the <a href="harbourmaster.html">Harbourmaster</a> it fully API driven. It manages User Authentication and Authorisation.</p>
-<p>The user facing component is the Usermanager, the main feature of which is a widget that is embedded in the website and backend, and which sends confirmation emails and communicates with the Harbourmaster.</p>
-<p>The Controlcenter gives admin/product manager/call center agents access to all necessary information. Groups and policies allow granular access control.</p>
-<h1 id="quick-start-guide"><a href="quick-start-guide.html">Quick Start Guide</a></h1>
-<h1 id="user-manager"><a href="Usermanager.html">User Manager</a></h1>
-<h1 id="control-center"><a href="control-center.html">Control Center</a></h1>
-<h1 id="harbourmaster"><a href="harbourmaster.html">Harbourmaster</a></h1>
-<h1 id="drupal-module"><a href="drupalmodule.html">Drupal Module</a></h1>
+                        <h1 id="multi-domain-setup">Multi domain setup</h1>
+<p>it is possible to allow users to login with the same username and password on multiple top level domains e.g. example.com and valiton.com. 
+There are tow options avalivel a multi usermanager installation and a singel user manger installation.</p>
+<h2 id="multi-usermanager">Multi Usermanager</h2>
+<p>Setup a usermanger Subdomain for each top levl domain.
+This setup allaws for the most customisation of the usermanger for the individual domain, as described in the <a href="Usermanager.html">Usermanager</a> documentation.</p>
+<p><strong>Note</strong></p>
+<p>not as of writing this documentation (August 2016) the automatical login in all SSO top level domains with one singel User login action, also knows as <strong>cross domain login</strong> is not avalibel in the Freemium Verion. </p>
+<h3 id="setup">Setup</h3>
+<p>To setup a secound domain, first follow the steps in the <a href="quick-start-guide.html">Quick Start Guide</a> </p>
+<p>Then you can setup a secound domain thunder.local by folling this steps </p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> harbourmaster-docs/quickstart/second-domain/
+
+docker-compose up
+</code></pre>
+<p><strong>Add /etc/hosts entries</strong></p>
+<p>Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100.</p>
+<p>Get your docker mashine ip with <code>docker-machine ip</code></p>
+<pre><code class="lang-bash"><span class="hljs-number">192.168</span>.<span class="hljs-number">99.100</span> usermanager.thunder.local www.thunder.local
+</code></pre>
+<h3 id="access-the-applications">Access the applications</h3>
+<h4 id="user-manager">User Manager</h4>
+<p><a href="http://usermanager.thunder.local:90/demo/" target="_blank">http://usermanager.thunder.local:90/demo/</a></p>
+<h4 id="configure-drupal-module">Configure Drupal Module</h4>
+<p>The installation and configuration is described in the chapter <a href="drupalmodule.html">Drupal Module</a></p>
+<p>User for the <strong>URL to usermanager</strong>: <a href="http://usermanager.thunder.local:90" target="_blank">http://usermanager.thunder.local:90</a></p>
+<h2 id="single-usermanger">Single Usermanger</h2>
+<p>due to the missing cross domain login feature in the Freemium Version is this freature not available.</p>
 
                     
                     </section>
@@ -281,8 +256,8 @@
         </div>
 
         
+        <a href="./license.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: LICENSE"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./quick-start-guide.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Quick Start Guide"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

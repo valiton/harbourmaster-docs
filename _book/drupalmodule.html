@@ -53,7 +53,7 @@
         data-chapter-title="Drupal Module"
         data-filepath="drupalmodule.md"
         data-basepath="."
-        data-revision="Thu Aug 11 2016 10:16:19 GMT+0200 (CEST)"
+        data-revision="Wed Aug 17 2016 22:26:26 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -172,6 +172,21 @@
             
         </li>
     
+        <li class="chapter " data-level="7" data-path="multidomainsetup.html">
+            
+                
+                    <a href="./multidomainsetup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        MultiDomainSetup
+                    </a>
+            
+            
+        </li>
+    
 
 
             
@@ -208,7 +223,7 @@
                         <h1 id="drupal8--thunder">Drupal8 / Thunder</h1>
 <h2 id="install-harbourmaster-sso-plugin">Install Harbourmaster SSO plugin</h2>
 <p>Github Link <a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin</a></p>
-<p>Tar.gz to install: <a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip</a></p>
+<p>zip to install: <a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip</a></p>
 <p>Install the module
 <img src="assets/drupal_install_1.png" alt="Install Module"></p>
 <p>Successfully installed
@@ -223,10 +238,12 @@
 <p>The Drupal Module needs to be configured to communicate to Harbourmaster API and includes the widget js from the usermanager.</p>
 <p><strong>HMS API CONFIGURATION</strong></p>
 <ul>
-<li><p>URL to Harbourmaster endpoint 
+<li>URL to Harbourmaster endpoint 
 <em>Includes protocol and domain (optionally port and/or path prefix).</em>
-e.g. <a href="http://harbourmaster.thunder.dev:8080" target="_blank">http://harbourmaster.thunder.dev:8080</a></p>
-</li>
+e.g. <a href="http://harbourmaster.thunder.dev:8080" target="_blank">http://harbourmaster.thunder.dev:8080</a>
+Note if you user Docker Native for mac use the IP address of our Computer e.g. 192.x.x.x</li>
+</ul>
+<ul>
 <li><p>Harbourmaster tenant to use
 <em>May only contain a-z A-Z 0-9 .</em>
 e.g. thunder</p>
