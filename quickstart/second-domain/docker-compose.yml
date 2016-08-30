@@ -5,6 +5,8 @@ thunder-usermanager:
   image: valiton/usermanager
   environment:
     NODE_ENV: docker-compose
+    CROSS_DOMAIN_LOGIN_BASE_URL: http://www.thunder.dev:9090/hms_cross_domain_login
+
   env_file:
     - ./usermananger_config_second-domain.env
     - ../shared_config.env
