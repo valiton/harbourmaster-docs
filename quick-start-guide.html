@@ -37,7 +37,7 @@
         
     
     
-    <link rel="next" href="./harbourmaster.html" />
+    <link rel="next" href="./multidomainsetup.html" />
     
     
     <link rel="prev" href="./index.html" />
@@ -53,7 +53,7 @@
         data-chapter-title="Quick Start Guide"
         data-filepath="quick-start-guide.md"
         data-basepath="."
-        data-revision="Wed Aug 17 2016 22:26:26 GMT+0200 (CEST)"
+        data-revision="Fri Sep 09 2016 14:44:36 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -97,14 +97,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="harbourmaster.html">
+        <li class="chapter " data-level="2" data-path="multidomainsetup.html">
+            
+                
+                    <a href="./multidomainsetup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Multi Domain Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="harbourmaster.html">
             
                 
                     <a href="./harbourmaster.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.</b>
+                            <b>3.</b>
                         
                         Harbourmaster
                     </a>
@@ -112,14 +127,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="Usermanager.html">
+        <li class="chapter " data-level="4" data-path="Usermanager.html">
             
                 
                     <a href="./Usermanager.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>4.</b>
                         
                         Usermanager
                     </a>
@@ -127,14 +142,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="control-center.html">
+        <li class="chapter " data-level="5" data-path="control-center.html">
             
                 
                     <a href="./control-center.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>5.</b>
                         
                         Control Center
                     </a>
@@ -142,14 +157,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="drupalmodule.html">
+        <li class="chapter " data-level="6" data-path="drupalmodule.html">
             
                 
                     <a href="./drupalmodule.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.</b>
+                            <b>6.</b>
                         
                         Drupal Module
                     </a>
@@ -157,31 +172,23 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="license.html">
+        <li class="chapter " data-level="7" data-path="own-domain-setup.html">
+            
+            <span><b>7.</b> Own Domain Setup</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="license.html">
             
                 
                     <a href="./license.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>8.</b>
                         
                         LICENSE
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="multidomainsetup.html">
-            
-                
-                    <a href="./multidomainsetup.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        MultiDomainSetup
                     </a>
             
             
@@ -221,38 +228,60 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="quick-start-guide">Quick Start Guide</h1>
-<p>Tested on OSX with Docker Toolbox installed. <a href="https://www.docker.com/toolbox" target="_blank">https://www.docker.com/toolbox</a></p>
+<p>The purpose of this quick start guide is to provide you with a fast and easy way of getting Harbourmaster set up and running on your local environment. 
+For an advanced production setup, please refer to the more detailed documentation further below.</p>
+<h2 id="what-is-in-this-guide">What is in this Guide</h2>
+<p>This guide will help you set up a set of Docker containers which will run the following applications:</p>
+<ul>
+<li><a href="https://hub.docker.com/_/mongo/" target="_blank">MongoDB</a> (used as main database)</li>
+<li><a href="https://hub.docker.com/_/redis" target="_blank">Redis</a> (used for caching)</li>
+<li><a href="https://hub.docker.com/_/nginx/" target="_blank">Ngnix</a> (used as reverse proxy) </li>
+<li><a href="https://hub.docker.com/r/valiton/harbourmaster/" target="_blank">Harbourmaster</a>  </li>
+<li><a href="https://hub.docker.com/r/valiton/usermanager/" target="_blank">Usermanager</a></li>
+<li><a href="https://hub.docker.com/r/valiton/controlcenter/" target="_blank">Control Center</a></li>
+</ul>
 <h2 id="create-a-docker-runtime-environment">Create a docker runtime environment</h2>
-<p>Install Toolbox and setup a local docker machine. Docker frequently releases new versions of docker toolbox, therefore this document can only reference the office documentation for creating a local docker environment; see <a href="https://www.docker.com/toolbox" target="_blank">https://www.docker.com/toolbox </a>and <a href="https://docs.docker.com/engine/getstarted/" target="_blank">https://docs.docker.com/engine/getstarted/</a></p>
+<p>This guide uses the software containerization platform <a href="https://www.docker.com/" target="_blank">Docker</a> in order to make the installation process as easy as possible. The first step is to install a docker runtime environment on your system. We recommend using the lastest version of the native Docker client. If you&apos;re running an older version of your operating system which doesn&apos;t meet Docker&apos;s requirements, you can alternatively install <a href="https://www.docker.com/products/docker-toolbox" target="_blank">Docker Toolbox</a>.</p>
+<p>For further instructions on how to get Docker or Docker Toolbox running on your system, please refer to the official starting guide: <a href="https://docs.docker.com/engine/getstarted/" target="_blank">Get Started with Docker</a></p>
 <h2 id="clone-the-harbourmasterdocs-repo-and-switch-to-the-quickstart-folder">Clone the harbourmaster-docs repo and switch to the quickstart folder</h2>
+<p>Get the lastest version of the Harbourmaster Quick Start Guide from our GitHub repository over at <a href="https://github.com/valiton/harbourmaster-docs.git" target="_blank">https://github.com/valiton/harbourmaster-docs.git</a>. This repository contains all the necessary files to get you set up and running. After you&apos;ve downloaded  the files, switch to the quickstart directory to get started:</p>
 <pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/valiton/harbourmaster-docs.git
 <span class="hljs-built_in">cd</span> harbourmaster-docs/quickstart/
 </code></pre>
 <h2 id="accept-harbourmaster-license">Accept Harbourmaster license</h2>
-<p>How to accept the license: see chapter <a href="harbourmaster.html">Harbourmaster</a></p>
-<p>For the quickstart guide file <code>shared_config.env</code> contains the line <code>LICENSE=accept</code> this allread accepts the licese for the quickstart guide run.</p>
-<h2 id="start-containers-with-dockercompose">Start containers with docker-compose</h2>
+<p>In order to run Harbourmaster, its <a href="license.html">license</a> has to be accepted via configuration. This quick start guide uses the <code>shared_config.env</code>configuration file, which already contains the necessary line <code>LICENSE=accept</code>.</p>
+<p>For more information on how to view and accept the license for your production setup, please refer to the chapter <a href="harbourmaster.html">Harbourmaster</a>.</p>
+<h2 id="start-containers-with-docker-compose">Start containers with Docker Compose</h2>
+<p>Docker Compose is a tool which can automatically start up multiple Docker containers in a way which is defined in a <code>docker-compose.yml</code>file (included in this quick start guide). While inside the quickstart directory, simply run:</p>
 <pre><code class="lang-bash">docker-compose up
 </code></pre>
+<p>The latest version of Harbourmaster will automatically be downloaded and started up using a pre-defined configuration.</p>
+<p>If Docker Compose didn&apos;t come with your Docker installation, please refer to the official <a href="https://docs.docker.com/compose/install/" target="_blank">Docker instructions</a> on how to install this tool.</p>
 <h2 id="seed-harbourmaster-tenants">Seed Harbourmaster tenants</h2>
-<p>You need to seed the database and provide an initial admin user password.</p>
+<p>This guide comes with a shell script which seeds the database with a few test-users as well as the admin user. During its run, the <a href="quickstart/seed-harbourmaster.sh">seed-harbourmaster.sh</a> script will prompt you to input an initial password for the admin user. In the quickstart directory, run:</p>
 <pre><code class="lang-bash">./seed-harbourmaster.sh
 </code></pre>
 <h2 id="add-etchosts-entries">Add /etc/hosts entries</h2>
-<p>Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100. 
-Get your docker mashine ip with <code>docker-machine ip</code></p>
-<pre><code class="lang-bash"><span class="hljs-number">192.168</span>.<span class="hljs-number">99.100</span> usermanager.thunder.dev harbourmaster.thunder.dev controlcenter.thunder.dev
+<p>Create the following entry in your /etc/hosts file. If your Docker containers are running non-locally, replace the IP address in this entry accordingly.</p>
+<p>All Harbourmaster applications are running on static TCP ports (Harbourmaster and Usermanager on port 80, Control Center on port 18040). As previously mentioned, the <code>docker-compose.yml</code> also starts up an Nginx container, which listens on port 80 and maps our subdomains (e.g. <code>usermanager.thunder</code> or <code>harbourmaster.thunder</code>) to the individual application containers.</p>
+<pre><code class="lang-bash"><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> usermanager.thunder.dev harbourmaster.thunder.dev controlcenter.thunder.dev
 </code></pre>
-<h1 id="access-the-applications">Access the applications</h1>
-<h2 id="control-center">Control Center</h2>
-<p><a href="http://controlcenter.thunder.dev:49040/" target="_blank">http://controlcenter.thunder.dev:49040/</a></p>
-<p>(username: admin, password: &lt;YOUR_INPUT_DURING_SEED&gt; )</p>
-<h2 id="user-manager">User Manager</h2>
-<p><a href="http://usermanager.thunder.dev/demo/" target="_blank">http://usermanager.thunder.dev/demo/</a></p>
-<h2 id="harbourmaster">Harbourmaster</h2>
-<p><a href="http://harbourmaster.thunder.dev:8080/" target="_blank">http://harbourmaster.thunder.dev:8080/</a></p>
-<h1 id="configure-drupal-module">Configure Drupal Module</h1>
-<p>The installation and configuration is described in the chapter <a href="drupalmodule.html">Drupal Module</a></p>
+<h1 id="accessing-the-applications">Accessing the applications</h1>
+<p>To access the applications, simply point your web browser to the following URLs:</p>
+<h3 id="control-center">Control Center</h3>
+<p><a href="http://controlcenter.thunder.dev/" target="_blank">http://controlcenter.thunder.dev</a></p>
+<p>(username: &quot;admin&quot;, password: &lt;YOUR_INPUT_DURING_SEED&gt; )</p>
+<h3 id="user-manager">User Manager</h3>
+<p><a href="http://usermanager.thunder.dev/demo/" target="_blank">http://usermanager.thunder.dev/demo</a></p>
+<h3 id="harbourmaster">Harbourmaster</h3>
+<p><a href="http://harbourmaster.thunder.dev/" target="_blank">http://harbourmaster.thunder.dev</a></p>
+<h1 id="configuring-the-drupal-module">Configuring the Drupal Module</h1>
+<p>For the installation and configuration of the Drupal Module, please refer to the chapter <a href="drupalmodule.html">Drupal Module</a></p>
+<h1 id="general-outline-for-your-production-setup">General outline for your production setup</h1>
+<p>In this Quick Start Guide, we have provided you with pre-configured docker-compose and *.env files in order to provide you with a working setup easily and quickly.</p>
+<p>When setting up Harbourmaster in a production environment, you should consider starting up each Harbourmaster application container (Harbourmaster, Usermanager and Control Center) individually and providing your own configurations. Please refer to the configuration section of each application to get an overview of how they can be customized and consider using your pre-configured local setup as a reference point.</p>
+<p>When working with Docker, the Harbourmaster applications will accept configuration options passed to them in environment variables. Each chapter provides you with the relevant variables and gives you example Docker run commands. For more information on how to start up applications using Docker, you can refer to the official documentation at <a href="https://docs.docker.com/engine/reference/run/" target="_blank">https://docs.docker.com/engine/reference/run/</a>.</p>
+<p>The Harbourmaster applications are all running on static ports which cannot be changed. You can, however, use Docker&apos;s EXPOSE feature (see link above) to determine which host port should be mapped to the application. As demonstrated in this Quick Start Guide, you can then set up a reverse proxy using applications such as Nginx or HAProxy. If you would like to set up an Nginx server similar to the one in this guide (and enable additional features such as SSL termination), you can check out our example <a href="quickstart/nginx.conf">nginx.conf</a> file and refer to <a href="http://nginx.org/en/docs/" target="_blank">the official documentation</a> (specifically the <a href="http://nginx.org/en/docs/beginners_guide.html#conf_structure" target="_blank">Beginner&apos;s Guide</a>) for setup instructions.</p>
 
                     
                     </section>
@@ -266,13 +295,17 @@ Get your docker mashine ip with <code>docker-machine ip</code></p>
         <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: README"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./harbourmaster.html" class="navigation navigation-next " aria-label="Next page: Harbourmaster"><i class="fa fa-angle-right"></i></a>
+        <a href="./multidomainsetup.html" class="navigation navigation-next " aria-label="Next page: Multi Domain Setup"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
 <script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
 
     
     <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
@@ -292,7 +325,7 @@ Get your docker mashine ip with <code>docker-machine ip</code></p>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"ga":{"token":"GTM-5X8W5W","configuration":"auto"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>
