@@ -11,13 +11,29 @@ redis:
     - "6379:6379"
 
 
+# revers proxy to avoid using ports
+nginx:
+  container_name: nginx
+  image: nginx
+  ports:
+    - "80:80"
+  env_file:
+    - ./shared_config.env
+  links:
+    - thunder-usermanager:thunder-usermanager
+    - thunder-controlcenter:thunder-controlcenter
+    - thunder-harbourmaster:thunder-harbourmaster
+
+  volumes:
+    - ./nginx.conf:/etc/nginx/conf.d/harbourmaster.conf
+
 thunder-controlcenter:
   container_name: thunder-controlcenter
   image: valiton/controlcenter
   environment:
     COOKIE_SECURE: "false"
     REDIRECT_TO_HTTPS: "false"
-    HARBOURMASTER_API_URL: http://harbourmaster.thunder.dev:8080/v1
+    HARBOURMASTER_API_URL: http://harbourmaster.thunder.dev/v1
   ports:
     - "49040:18040"
 
@@ -27,14 +43,12 @@ thunder-usermanager:
   image: valiton/usermanager
   environment:
     NODE_ENV: docker-compose
-    CROSS_DOMAIN_LOGIN_BASE_URL: http://www.thunder.local:9080/hms_cross_domain_login
-
   env_file:
-    - ./usermananger_config.env
+    - ./usermanager_config.env
     - ./shared_config.env
 
   ports:
-    - "80:80"
+    - "8000:80"
   links:
     - thunder-harbourmaster:harbourmaster
     - redis:redis

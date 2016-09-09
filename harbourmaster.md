@@ -3,11 +3,11 @@
 ## About
 
 The Harbourmaster application is the backbone of the Harbourmaster SSO. It provides the API which powers all other applications.
-https://hub.docker.com/r/valiton/harbourmaster/
+[https://hub.docker.com/r/valiton/harbourmaster/](https://hub.docker.com/r/valiton/harbourmaster/)
 
-Its main API is the REST API, which contains a full documentation with Swagger: http://YOUR_HARBOURMASTER_URL/docs
+Its main API is the REST API, which contains a full documentation with Swagger: [http://YOUR\_HARBOURMASTER\_URL/docs](http://YOUR_HARBOURMASTER_URL/docs)
 
-As well as the Rest API, it provides a change notification mechanism that allows notifications to be received for example, when a user changes their profile data (not included in the Freemium version).
+As well as the Rest API, it provides a change notification mechanism that allows notifications to be received for example, when a user changes their profile data \(not included in the Freemium version\).
 
 The Harbourmaster stores data in a [MongoDB](https://www.mongodb.com/).
 
@@ -16,7 +16,7 @@ The Harbourmaster stores data in a [MongoDB](https://www.mongodb.com/).
 The Harbourmaster comprises a core module and a couple of feature extending modules listed. Not all modules are include in the Freemium version.
 
 | Module Name | Description | In Freemium |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | harbourmaster | Core module with all API required for basic SSO | YES |
 | hms-module-user-confirmable | Adds API for user registration confirmation | YES |
 | hms-module-user-tokens | Adds API to assign tokens to users, used in combination with mobile SDK | YES |
@@ -37,14 +37,20 @@ The Harbourmaster Freemium is licensed under the attached [LICENSE](license.md).
 
 To start the Harbourmaster you need to accept the license by passing the LICENSE=accept, to display the license pass LICENSE=view
 
-
 ```bash
 LICENSE=<accept|view>
 ```
 
+Simple command to view just the license and dont run all the containers
+
+```bash
+docker run -e LICENSE=view valiton/harbourmaster
+
+```
+
 ## Configuration
 
-The necessary configuration of the Harbourmaster is defined with environment variables. 
+The necessary configuration of the Harbourmaster is defined with environment variables.
 
 ```bash
 LICENSE=<accept|view>
@@ -64,39 +70,34 @@ USERMANAGER_HMS_USER_SECRET_KEY=<usermanager secret key random string> e.g. 58c9
 
 ```
 
-
-
 ## Docker run
 
-Start a mongodb and redis as a container
+Start a mongodb and redis as a container:
+
 ```bash
 docker run -d --name=mongo mongo:3.2
 docker run -d --name=redis redis
 ```
 
-Start the Harbourmaster server
+Start the Harbourmaster server:
 
 ```bash
-docker run --name=thunder-harbourmaster -it -e LICENSE=accept --link mongo:mongo --link redis:redis docker pull valiton/harbourmaster
+docker run --name=thunder-harbourmaster -it -e LICENSE=accept --link mongo:mongo --link redis:redis valiton/harbourmaster
 ```
 
-Seed the mongodb with an initial data set; this is necessary because all API endpoints need a logged in user. The seedscript creates the initial user. 
+Seed the mongodb with an initial data set; this is necessary because all API endpoints need a logged in user. The seedscript creates the initial user.
 
 ```bash
-docker exec -it thunder-harbourmaster bash -c "node /app/scripts/seed-create-thunder-tanent.js"
+docker exec -it thunder-harbourmaster bash -c "node /app/scripts/seed-create-thunder-tenant.js"
 ```
 
 ## Backup
 
-it is strongly recomended to make backups of the mongodb.
-the quickstart contains a backup script which can be used as a starting point to create a backup for the mongodb https://github.com/valiton/harbourmaster-docs/blob/master/quickstart/mongodb_backup.sh
-
-It is recomend to use a cronjob to run the backup repeatedly.  
-
+The [Quick Start Guide](/quick-start-guide.md) repository contains a [backup script](https://github.com/valiton/harbourmaster-docs/blob/master/quickstart/mongodb_backup.sh) which can be used as a starting point to create an automated backup process for the MongoDB. It is recommended to use a [Cron job](http://www.unixgeeks.org/security/newbie/unix/cron-1.html) to automate and schedule the backup prodecure.
 
 ## API
 
-The Harbourmaster provides a HTTP REST API. Its main API is the REST API, which is full documents with swagger. http://<HARBOURMASTER>/docs
+The Harbourmaster provides a HTTP REST API. Its main API is the REST API, which is full documents with swagger. [http://YOUR\_HARBOURMASTER\_URL/docs](http://YOUR_HARBOURMASTER_URL/docs)
 
 The basic API structure example:
 

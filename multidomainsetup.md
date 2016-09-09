@@ -1,63 +1,37 @@
-#Multi domain setup
+# [Quick Start Guide](quick-start-guide.md) Multi Domain Setup
 
-it is possible to allow users to login with the same username and password on multiple top level domains e.g. example.com and valiton.com. 
-There are tow options avalivel a multi usermanager installation and a singel user manger installation.
+With Harbourmaster it is possible allow users to login with the same username and password on multiple top level domains e.g. `tunder.dev` and `thunder.local`. This requires to set up multiple usermanagers, each dedicated to their own domain but each communicating with the same Harbourmaster. This setup allows for the most customization since each usermanager can be configured individually \(see chapter [Usermanager\)](/Usermanager.md).
 
+![](assets/multiple_domain_overview.png)
 
-##Multi Usermanager
+It is possible to automatically log in users on all SSO domains with one single login action, also known as **cross domain login**. This feature relies on third-party cookies \(setting a cookie on a domain which the user is not currently visiting\). Some browser block third-party cookies, which is why this feature is not compatible with all browsers.
 
-Setup a usermanger Subdomain for each top levl domain.
-This setup allaws for the most customisation of the usermanger for the individual domain, as described in the [Usermanager](Usermanager.md) documentation.
+This guide aims to provide you with a quick way to set up a local multi usermanager installation. It is assumed that you have followed our [Quick Start Guide](/quick-start-guide.md) to the point where the Harbourmaster, Usermanager and Controlcenter are all running on your system.
 
-**Note**
+## Adding a second Usermanager to the [Quick Start Guide](quick-start-guide.md)
 
-not as of writing this documentation (August 2016) the automatical login in all SSO top level domains with one singel User login action, also knows as **cross domain login** is not avalibel in the Freemium Verion. 
+The Harbourmaster quick start repository comes with the [docker-compose-second-domain.yml](quickstart/docker-compose-second-domain.yml) which is pre-configured to add a second Usermanager to the [Quick Start Guide](/quick-start-guide.md). This Usermanager will be running under the `usermanager.thunder.local` domain.
 
-### Setup
-
-To setup a secound domain, first follow the steps in the [Quick Start Guide](quick-start-guide.md) 
-
-Then you can setup a secound domain thunder.local by folling this steps 
-
+Stop the docker-compose run from the Quick Start Guide and start it again with providing both docker compose files
 
 ```bash
-cd harbourmaster-docs/quickstart/second-domain/
-
-docker-compose up
+cd harbourmaster-docs/quickstart/
+docker-compose -f docker-compose.yml -f docker-compose-second-domain.yml up
 ```
 
 **Add /etc/hosts entries**
 
-Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100.
-
-Get your docker mashine ip with ```docker-machine ip```
+Create the following entry in your /etc/hosts file. If the second Usermanager's Docker container is running non-locally, replace the IP address in this entry accordingly.
 
 ```bash
-192.168.99.100 usermanager.thunder.local www.thunder.local
+127.0.0.1 usermanager.thunder.local www.thunder.local
 ```
 
-### Access the applications
+### Accessing the applications
 
+To access your second Usermanager, simply point your web browser to [http://usermanager.thunder.local/demo/](http://usermanager.thunder.local/demo/).
 
-#### User Manager
+You should now have two Usermanagers running under two different domains: `thunder.local` and `thunder.dev`. Both Usermanagers are communicating with the same Harbourmaster, allowing users to log in accross multiple domains.
 
+_Note concerning the Drupal Module installation: In the **URL to usermanager** option, use [http://usermanager.thunder.local](http://usermanager.thunder.local)_
 
-
-[http://usermanager.thunder.local:90/demo/](http://usermanager.thunder.local:90/demo/)
-
-
-
-#### Configure Drupal Module
-
-
-
-The installation and configuration is described in the chapter [Drupal Module](drupalmodule.md)
-
-
-User for the **URL to usermanager**: http://usermanager.thunder.local:90
-
-
-
-## Single Usermanger
-
-due to the missing cross domain login feature in the Freemium Version is this freature not available.

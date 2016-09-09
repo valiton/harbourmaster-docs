@@ -51,7 +51,7 @@
         data-chapter-title="README"
         data-filepath="README.md"
         data-basepath="."
-        data-revision="Wed Aug 17 2016 22:26:26 GMT+0200 (CEST)"
+        data-revision="Fri Sep 09 2016 14:44:36 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -95,14 +95,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="harbourmaster.html">
+        <li class="chapter " data-level="2" data-path="multidomainsetup.html">
+            
+                
+                    <a href="./multidomainsetup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Multi Domain Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="harbourmaster.html">
             
                 
                     <a href="./harbourmaster.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.</b>
+                            <b>3.</b>
                         
                         Harbourmaster
                     </a>
@@ -110,14 +125,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="Usermanager.html">
+        <li class="chapter " data-level="4" data-path="Usermanager.html">
             
                 
                     <a href="./Usermanager.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>4.</b>
                         
                         Usermanager
                     </a>
@@ -125,14 +140,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="control-center.html">
+        <li class="chapter " data-level="5" data-path="control-center.html">
             
                 
                     <a href="./control-center.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>5.</b>
                         
                         Control Center
                     </a>
@@ -140,14 +155,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="drupalmodule.html">
+        <li class="chapter " data-level="6" data-path="drupalmodule.html">
             
                 
                     <a href="./drupalmodule.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.</b>
+                            <b>6.</b>
                         
                         Drupal Module
                     </a>
@@ -155,31 +170,23 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="license.html">
+        <li class="chapter " data-level="7" data-path="own-domain-setup.html">
+            
+            <span><b>7.</b> Own Domain Setup</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="license.html">
             
                 
                     <a href="./license.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>8.</b>
                         
                         LICENSE
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="multidomainsetup.html">
-            
-                
-                    <a href="./multidomainsetup.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        MultiDomainSetup
                     </a>
             
             
@@ -254,14 +261,15 @@
 </li>
 <li><p>Cross Domain login/logout  (not available in Freemium)</p>
 </li>
-<li>Login with Facebook, Twitter, Google Plus et al</li>
+<li><p>Login with Facebook, Twitter, Google Plus et al</p>
+</li>
 <li>API Driven &#x2013; all functions can also be accessed by third-party systems via API</li>
 <li>Customer self-service widget  </li>
 </ul>
 <p>Valiton&#x2019;s many years of development experience in <a href="https://nodejs.org/" target="_blank">NodeJS </a>was the base on which it implemented the applications in the Harbourmaster SSO and developed a fast and resource-efficient SSO solution as a loosely coupled architecture. Harbourmaster is also the central component for access management of premium content on publishing sites. We can perfectly apply our know-how in the field of online shops and mobile apps into the integration of third party systems.</p>
 <p>For more information about Harbourmaster SSO please feel free to contact us directly. <a href="mailto:kontakt@valiton.com" target="_blank">kontakt@valiton.com</a></p>
 <h2 id="system-components">System Components</h2>
-<p><img src="assets/system_components.jpg" alt=""></p>
+<p><img src="assets/system_components.png" alt=""></p>
 <p>The Harbourmaster SSO contains three components in the Freemium version of Thunder. The Freemium version is under the attached LICENSE.</p>
 <p>The Core component is the <a href="harbourmaster.html">Harbourmaster</a> it fully API driven. It manages User Authentication and Authorisation.</p>
 <p>The user facing component is the Usermanager, the main feature of which is a widget that is embedded in the website and backend, and which sends confirmation emails and communicates with the Harbourmaster.</p>
@@ -291,6 +299,10 @@
 <script src="gitbook/app.js"></script>
 
     
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
     <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
     
 
@@ -308,7 +320,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"ga":{"token":"GTM-5X8W5W","configuration":"auto"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

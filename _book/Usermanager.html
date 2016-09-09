@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="3"
+        data-level="4"
         data-chapter-title="Usermanager"
         data-filepath="Usermanager.md"
         data-basepath="."
-        data-revision="Wed Aug 17 2016 22:26:26 GMT+0200 (CEST)"
+        data-revision="Fri Sep 09 2016 14:44:36 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -97,14 +97,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="harbourmaster.html">
+        <li class="chapter " data-level="2" data-path="multidomainsetup.html">
+            
+                
+                    <a href="./multidomainsetup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Multi Domain Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="harbourmaster.html">
             
                 
                     <a href="./harbourmaster.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.</b>
+                            <b>3.</b>
                         
                         Harbourmaster
                     </a>
@@ -112,14 +127,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="3" data-path="Usermanager.html">
+        <li class="chapter active" data-level="4" data-path="Usermanager.html">
             
                 
                     <a href="./Usermanager.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>4.</b>
                         
                         Usermanager
                     </a>
@@ -127,14 +142,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="control-center.html">
+        <li class="chapter " data-level="5" data-path="control-center.html">
             
                 
                     <a href="./control-center.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>5.</b>
                         
                         Control Center
                     </a>
@@ -142,14 +157,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="drupalmodule.html">
+        <li class="chapter " data-level="6" data-path="drupalmodule.html">
             
                 
                     <a href="./drupalmodule.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.</b>
+                            <b>6.</b>
                         
                         Drupal Module
                     </a>
@@ -157,31 +172,23 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="license.html">
+        <li class="chapter " data-level="7" data-path="own-domain-setup.html">
+            
+            <span><b>7.</b> Own Domain Setup</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="license.html">
             
                 
                     <a href="./license.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>8.</b>
                         
                         LICENSE
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="multidomainsetup.html">
-            
-                
-                    <a href="./multidomainsetup.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        MultiDomainSetup
                     </a>
             
             
@@ -223,13 +230,13 @@
                         <h1 id="user-manager">User Manager</h1>
 <h2 id="about">About</h2>
 <p>The usermanager extends the Harbourmaster SSO. It is a dedicated web application where users of the single sign-on can manage their user account.
-<a href="https://hub.docker.com/r/valiton/usermanager/" target="_blank">https:\/\/hub.docker.com\/r\/valiton\/usermanager\/</a></p>
+<a href="https://hub.docker.com/r/valiton/usermanager/" target="_blank">https://hub.docker.com/r/valiton/usermanager/</a></p>
 <p>The user facing component is the usermanager; its main features are a frontend widget that is embedded in the website, and a backend that sends confirmation emails and communicates with the Harbourmaster.</p>
 <h3 id="features">Features</h3>
 <ul>
 <li>Registration</li>
 <li>Password Recovery</li>
-<li>Login\/Social Login</li>
+<li>Login/Social Login</li>
 <li>Logout</li>
 <li><p>My Account</p>
 <ul>
@@ -238,9 +245,9 @@
 <li>Change Password</li>
 </ul>
 </li>
-<li><p>Opt-in\/double opt-in</p>
+<li><p>Opt-in/double opt-in</p>
 </li>
-<li><p>Newsletter subscription\/unsubscribe</p>
+<li><p>Newsletter subscription/unsubscribe</p>
 </li>
 </ul>
 <h3 id="backend-application">Backend application</h3>
@@ -269,7 +276,7 @@ The key responsibilities of the usermanager backend are:</p>
 </ul>
 <h3 id="widgets">Widgets</h3>
 <p>The widgets are easy to embed and customise with JavaScript applications. The Drupal Module already comes with built in integration. For all user cases there is a single widget, making placement on the page very easy. The widgets are responsive based on the twitter bootstrap grid.</p>
-<p>The widgets are based on <a href="http://emberjs.com/" target="_blank">emberjs. </a>Widget Overview:</p>
+<p>The widgets are based on <a href="http://emberjs.com/" target="_blank">Ember.js</a>. Widget Overview:</p>
 <ul>
 <li>Login</li>
 <li>Sign-up</li>
@@ -279,10 +286,10 @@ The key responsibilities of the usermanager backend are:</p>
 <li>Password reset</li>
 </ul>
 <h3 id="compatibility">Compatibility</h3>
-<p>emberjs uses JavaScript prototype Extensions for Array, String and Function. To avoid compatibility issues in custom JavaScript, do not use incompatible JavaScript code.</p>
+<p>Ember.js uses JavaScript prototype Extensions for Array, String and Function. To avoid compatibility issues in custom JavaScript, do not use incompatible JavaScript code.</p>
 <h2 id="installation">Installation</h2>
-<h3 id="configuration">configuration</h3>
-<p>The usermanager uses external Service\/APIs, which need to be configured.</p>
+<h3 id="configuration">Configuration</h3>
+<p>The usermanager uses external Service/APIs, which need to be configured.</p>
 <p>The minimal required configurations for the usermanager are done by ENVIROMENT variables.</p>
 <p><strong>usermanager.env </strong>file for docker run</p>
 <pre><code class="lang-bash"><span class="hljs-comment">#usermanager.env</span>
@@ -300,14 +307,18 @@ EMAIL_SMTP_SECURE=&lt;<span class="hljs-literal">true</span>|<span class="hljs-l
 EMAIL_SMTP_IGNORE_TLS=&lt;<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&gt; <span class="hljs-comment">#if this is true and secure is false, TLS will not be used (either to connect, or as a STARwwtion upgrade command).</span>
 
 SSO_COOKIE_DOMAIN=.thunder.dev <span class="hljs-comment">#the domain where the sso cookie lives</span>
-SSO_WIDGET_CORS_DOMAINS=http://www.thunder.dev <span class="hljs-comment">#add your Drupal domain here, comma separated list is possible</span>
+SSO_COOKIE_NAME=token  <span class="hljs-comment">#the name of the SSO cookie</span>
+SSO_WIDGET_CORS_HTTP_HOSTS=http://www.thunder.dev <span class="hljs-comment">#add your Drupal domain here, comma separated list is possible</span>
 
-BASE_URL=http://usermanager.thunder.dev <span class="hljs-comment">#url where the usermanager will be publically accessible</span>
-FALLBACK_URL=http://www.thunder.dev/ <span class="hljs-comment">#fallback to this url, recommend use the thunder home page, only used in case of miss use by uses</span>
+CROSS_DOMAIN_LOGIN_BASE_URL=http://www.thunder.local:<span class="hljs-number">9080</span>/hms_cross_domain_login  <span class="hljs-comment">#add the cross doamin login url endpoint in e.g. Drupal. The Drupal module has a config section for the url path.</span>
+
+
+BASE_URL=http://usermanager.thunder.dev <span class="hljs-comment">#url where the usermanager will be publicly accessible</span>
+FALLBACK_URL=http://www.thunder.dev/ <span class="hljs-comment">#fallback to this url. It is recommended to use the thunder home page, only used in case of misuse by users</span>
 </code></pre>
 <h3 id="docker-run">Docker Run</h3>
-<p>Requires a runing harbourmaster and redis container to link to</p>
-<pre><code class="lang-bash">docker run -name usermanager --port <span class="hljs-number">80</span>:<span class="hljs-number">80</span> --link thunder-harbourmaster:harbourmaster -- link  redis:redis --env-file usermanager.env <span class="hljs-operator">-e</span> NODE_ENV=docker-compose  valiton/usermanager
+<p>The following command requires a running Harbourmaster and redis container to link to.</p>
+<pre><code class="lang-bash">docker run --name usermanager -p <span class="hljs-number">80</span>:<span class="hljs-number">80</span> --link thunder-harbourmaster:harbourmaster --link redis:redis --env-file usermanager_config.env <span class="hljs-operator">-e</span> NODE_ENV=docker-compose valiton/usermanager
 </code></pre>
 <h3 id="changing-ui-text">Changing UI Text</h3>
 <p>Every Text which get displayed to the user in the frontend widget can be customized. Each UI text is individually addressable in a hierarchical JSON object notation, unlike Drupal, English is not the default text.</p>
@@ -319,12 +330,12 @@ FALLBACK_URL=http://www.thunder.dev/ <span class="hljs-comment">#fallback to thi
 }
 </code></pre><p><img src="assets/signup-widget.png" alt=""></p>
 <h4 id="drupal-local-module-interface-translation">Drupal local Module <a href="https://www.drupal.org/documentation/modules/locale" target="_blank">Interface Translation</a></h4>
-<p>The Harbourmaster Drupal Module utilizes the option to use Drupal translations in JavaScript <a href="https://www.drupal.org/node/323109" target="_blank">https:\/\/www.drupal.org\/node\/323109</a></p>
+<p>The Harbourmaster Drupal Module utilizes the option to use Drupal translations in JavaScript <a href="https://www.drupal.org/node/323109" target="_blank">https://www.drupal.org/node/323109</a></p>
 <p>The Drupal Module contains a de.po and a hms.pot file which can be used to translate all UI text elements.</p>
 <p>All translation strings are prefixed with hms-widget e.g. <code>hms-widget.signup.title.signup</code></p>
 <p>To be able to use this you need:</p>
 <ol>
-<li>to install the <strong>Interface Translation</strong> <a href="https://www.drupal.org/documentation/modules/locale" target="_blank">https:\/\/www.drupal.org\/documentation\/modules\/locale</a></li>
+<li>to install the <strong>Interface Translation</strong> <a href="https://www.drupal.org/documentation/modules/locale" target="_blank">https://www.drupal.org/documentation/modules/locale</a></li>
 </ol>
 <p><img src="assets/drupal-module-interface-translation.png" alt=""></p>
 <ol>
@@ -364,13 +375,13 @@ Within the generated stylesheet all widget related parts are prefixed with the <
 <h4 id="drupal-based-css-overwrite">Drupal based CSS overwrite</h4>
 <p>This option describes the adaption of the widget design by replacing predefined values in an existing style sheet.</p>
 <p>The relevant file is located inside the Harbourmaster Drupal plugin folder.
-<a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin" target="_blank">https:\/\/github.com\/valiton\/harbourmaster-sso-drupal8-plugin</a></p>
+<a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin</a></p>
 <pre><code>harbourmaster-sso-drupal8-plugin/css/white-label-static.css
 </code></pre><p>It includes a basic set of selector classes to tackle most of the visible form fields.</p>
 <p>Just play around with the property values (colours, sizes, backgrounds) and when finished, simply flush all caches (available from the Drupal admin menu) before reloading your page.</p>
 <h4 id="usermanager-less-injection">Usermanager LESS injection</h4>
 <p>Besides the ability to include a pre-compiled CSS file, we also offer a more advanced option to adapt the look and feel of the widget.</p>
-<p>Any technical savvy developer\/designer\/site builder can customize the white-label.less file to meet the requirements in regards of CI and existing specifications. The injection uses the docker volume feature to <a href="https://docs.docker.com/v1.10/engine/userguide/containers/dockervolumes/#mount-a-host-file-as-a-data-volume" target="_blank">mount individual host files</a></p>
+<p>Any technical savvy developer/designer/site builder can customize the white-label.less file to meet the requirements in regards of CI and existing specifications. The injection uses the docker volume feature to <a href="https://docs.docker.com/v1.10/engine/userguide/containers/dockervolumes/#mount-a-host-file-as-a-data-volume" target="_blank">mount individual host files</a></p>
 <pre><code> ./white-label.less:/app/assets/styles/less/white-label.less
 </code></pre><p>Some basic selector groups have already been included; for further adjustments one can inspect the required DOM nodes in source code view and amend existing class or ID definitions within the style sheet.</p>
 <p>You can change default color, size and font definitions in the variables file located at</p>
@@ -410,6 +421,10 @@ EMAIL_SMTP_IGNORE_TLS=&lt;true|false&gt;    #if this is true and secure is false
 <script src="gitbook/app.js"></script>
 
     
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
     <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
     
 
@@ -427,7 +442,7 @@ EMAIL_SMTP_IGNORE_TLS=&lt;true|false&gt;    #if this is true and secure is false
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"ga":{"token":"GTM-5X8W5W","configuration":"auto"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

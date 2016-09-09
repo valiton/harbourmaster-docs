@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="5"
+        data-level="6"
         data-chapter-title="Drupal Module"
         data-filepath="drupalmodule.md"
         data-basepath="."
-        data-revision="Wed Aug 17 2016 22:26:26 GMT+0200 (CEST)"
+        data-revision="Fri Sep 09 2016 14:44:36 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -97,14 +97,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="harbourmaster.html">
+        <li class="chapter " data-level="2" data-path="multidomainsetup.html">
+            
+                
+                    <a href="./multidomainsetup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Multi Domain Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="harbourmaster.html">
             
                 
                     <a href="./harbourmaster.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.</b>
+                            <b>3.</b>
                         
                         Harbourmaster
                     </a>
@@ -112,14 +127,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="Usermanager.html">
+        <li class="chapter " data-level="4" data-path="Usermanager.html">
             
                 
                     <a href="./Usermanager.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>4.</b>
                         
                         Usermanager
                     </a>
@@ -127,14 +142,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="control-center.html">
+        <li class="chapter " data-level="5" data-path="control-center.html">
             
                 
                     <a href="./control-center.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>5.</b>
                         
                         Control Center
                     </a>
@@ -142,14 +157,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="5" data-path="drupalmodule.html">
+        <li class="chapter active" data-level="6" data-path="drupalmodule.html">
             
                 
                     <a href="./drupalmodule.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.</b>
+                            <b>6.</b>
                         
                         Drupal Module
                     </a>
@@ -157,31 +172,23 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="license.html">
+        <li class="chapter " data-level="7" data-path="own-domain-setup.html">
+            
+            <span><b>7.</b> Own Domain Setup</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="license.html">
             
                 
                     <a href="./license.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>8.</b>
                         
                         LICENSE
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="multidomainsetup.html">
-            
-                
-                    <a href="./multidomainsetup.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        MultiDomainSetup
                     </a>
             
             
@@ -233,40 +240,58 @@
 <p>Successfully activated
 <img src="assets/drupal_install_4.png" alt="Active Module Success"></p>
 <h2 id="configuration">Configuration</h2>
-<p>Configure the module
-<img src="assets/drupal_install_5.png" alt=""></p>
+<ul>
+<li>Configure the module
+<img src="assets/drupal_install_5.png" alt=""></li>
+</ul>
 <p>The Drupal Module needs to be configured to communicate to Harbourmaster API and includes the widget js from the usermanager.</p>
 <p><strong>HMS API CONFIGURATION</strong></p>
 <ul>
-<li>URL to Harbourmaster endpoint 
-<em>Includes protocol and domain (optionally port and/or path prefix).</em>
-e.g. <a href="http://harbourmaster.thunder.dev:8080" target="_blank">http://harbourmaster.thunder.dev:8080</a>
-Note if you user Docker Native for mac use the IP address of our Computer e.g. 192.x.x.x</li>
-</ul>
-<ul>
+<li><p>URL to Harbourmaster endpoint 
+<em>Includes protocol and domain (optionally port and/or path prefix). This Url is used for server to server communication, it is not used by the browser.</em>
+e.g. &quot;<a href="http://harbourmaster.thunder.dev:8080" target="_blank">http://harbourmaster.thunder.dev:8080&quot;</a>
+Required for the multi domain setup. Note if you user Docker Native for Mac use the IP address of your computer e.g. 192.x.x.x</p>
+</li>
 <li><p>Harbourmaster tenant to use
 <em>May only contain a-z A-Z 0-9 .</em>
-e.g. thunder</p>
+e.g. &quot;thunder&quot;</p>
 </li>
 <li><p>HMS lookup cache TTL
 <em>Duration during which the HMS session lookup is cached.</em>
-e.g. 60</p>
+e.g. &quot;60&quot;</p>
 </li>
 </ul>
 <p><strong>USERMANAGER CONFIGURATION</strong></p>
 <ul>
 <li>URL to usermanager
-<em>Includes protocol and domain (optionally port and/or path prefix).</em>
-e.g. <a href="http://usermanager.thunder.dev" target="_blank">http://usermanager.thunder.dev</a></li>
+<em>Includes protocol and domain (optionally port and/or path prefix). This Url will be used to load the Usermanger Widget, it is not used for server to server _communication</em>, it is only used by the browser._
+e.g. &quot;<a href="http://usermanager.thunder.dev" target="_blank">http://usermanager.thunder.dev&quot;</a></li>
 </ul>
 <p><strong>HMS TOKEN CONFIGURATION</strong></p>
 <ul>
 <li>SSO cookie name
 <em>Name of the cookie that contains the HMS token (usually &quot;token&quot;). May only contain a-z A-Z 0-9 .-\</em>..SSO _
-e.g. token</li>
+e.g. &quot;token&quot;</li>
 <li><p>Cookie domain</p>
 <p><em>Name of the domain which the SSO cookie is set on.</em>
- e.g. .thunder.dev</p>
+ e.g. &quot;.thunder.dev&quot;</p>
+</li>
+</ul>
+<ul>
+<li><p>SSO cookie lifetime
+<em>Duration in seconds in which the cookie stays valid. When set to 0, the cookie will expire after browser close.</em></p>
+<p>e.g. 2592000 (30 dais)</p>
+</li>
+</ul>
+<p><strong>CROSS DOMAIN AUTHENTICATION CONFIGURATION</strong></p>
+<ul>
+<li><p>Cross domain login</p>
+<p><em>Set this path to what the Usermanager uses to authenticate the user with this domain.</em>
+e.g. /hms_cross_domain_login</p>
+</li>
+<li><p>Cross domain logout</p>
+<p><em>Set this path to what the Usermanager uses to invalidate the user&apos;s session with this domain.</em>
+e.g. /hms_cross_domain_logout</p>
 </li>
 </ul>
 
@@ -291,6 +316,10 @@ e.g. token</li>
 <script src="gitbook/app.js"></script>
 
     
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
     <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
     
 
@@ -308,7 +337,7 @@ e.g. token</li>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"ga":{"token":"GTM-5X8W5W","configuration":"auto"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

@@ -34,6 +34,7 @@ Some of the main strengths of SSO are:
 * Android SDK \(not available in Freemium\)
 
 * Cross Domain login/logout  \(not available in Freemium\)
+
 * Login with Facebook, Twitter, Google Plus et al
 * API Driven – all functions can also be accessed by third-party systems via API
 * Customer self-service widget  
@@ -44,7 +45,7 @@ For more information about Harbourmaster SSO please feel free to contact us dire
 
 ## System Components
 
-![](assets/system_components.jpg)
+![](assets/system_components.png)
 
 The Harbourmaster SSO contains three components in the Freemium version of Thunder. The Freemium version is under the attached LICENSE.
 

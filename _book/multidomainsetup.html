@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>MultiDomainSetup | Harbourmaster Single Sing On (SSO)</title>
+        <title>Multi Domain Setup | Harbourmaster Single Sing On (SSO)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,8 +37,10 @@
         
     
     
+    <link rel="next" href="./harbourmaster.html" />
     
-    <link rel="prev" href="./license.html" />
+    
+    <link rel="prev" href="./quick-start-guide.html" />
     
 
         
@@ -47,11 +49,11 @@
         
         
     <div class="book"
-        data-level="7"
-        data-chapter-title="MultiDomainSetup"
+        data-level="2"
+        data-chapter-title="Multi Domain Setup"
         data-filepath="multidomainsetup.md"
         data-basepath="."
-        data-revision="Wed Aug 17 2016 22:26:26 GMT+0200 (CEST)"
+        data-revision="Fri Sep 09 2016 14:44:36 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -95,14 +97,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="harbourmaster.html">
+        <li class="chapter active" data-level="2" data-path="multidomainsetup.html">
+            
+                
+                    <a href="./multidomainsetup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Multi Domain Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="harbourmaster.html">
             
                 
                     <a href="./harbourmaster.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.</b>
+                            <b>3.</b>
                         
                         Harbourmaster
                     </a>
@@ -110,14 +127,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="Usermanager.html">
+        <li class="chapter " data-level="4" data-path="Usermanager.html">
             
                 
                     <a href="./Usermanager.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>4.</b>
                         
                         Usermanager
                     </a>
@@ -125,14 +142,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="control-center.html">
+        <li class="chapter " data-level="5" data-path="control-center.html">
             
                 
                     <a href="./control-center.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>5.</b>
                         
                         Control Center
                     </a>
@@ -140,14 +157,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="drupalmodule.html">
+        <li class="chapter " data-level="6" data-path="drupalmodule.html">
             
                 
                     <a href="./drupalmodule.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.</b>
+                            <b>6.</b>
                         
                         Drupal Module
                     </a>
@@ -155,31 +172,23 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="license.html">
+        <li class="chapter " data-level="7" data-path="own-domain-setup.html">
+            
+            <span><b>7.</b> Own Domain Setup</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="license.html">
             
                 
                     <a href="./license.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>8.</b>
                         
                         LICENSE
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="7" data-path="multidomainsetup.html">
-            
-                
-                    <a href="./multidomainsetup.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        MultiDomainSetup
                     </a>
             
             
@@ -218,34 +227,25 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="multi-domain-setup">Multi domain setup</h1>
-<p>it is possible to allow users to login with the same username and password on multiple top level domains e.g. example.com and valiton.com. 
-There are tow options avalivel a multi usermanager installation and a singel user manger installation.</p>
-<h2 id="multi-usermanager">Multi Usermanager</h2>
-<p>Setup a usermanger Subdomain for each top levl domain.
-This setup allaws for the most customisation of the usermanger for the individual domain, as described in the <a href="Usermanager.html">Usermanager</a> documentation.</p>
-<p><strong>Note</strong></p>
-<p>not as of writing this documentation (August 2016) the automatical login in all SSO top level domains with one singel User login action, also knows as <strong>cross domain login</strong> is not avalibel in the Freemium Verion. </p>
-<h3 id="setup">Setup</h3>
-<p>To setup a secound domain, first follow the steps in the <a href="quick-start-guide.html">Quick Start Guide</a> </p>
-<p>Then you can setup a secound domain thunder.local by folling this steps </p>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> harbourmaster-docs/quickstart/second-domain/
-
-docker-compose up
+                        <h1 id="quick-start-guide-multi-domain-setup"><a href="quick-start-guide.html">Quick Start Guide</a> Multi Domain Setup</h1>
+<p>With Harbourmaster it is possible allow users to login with the same username and password on multiple top level domains e.g. <code>tunder.dev</code> and <code>thunder.local</code>. This requires to set up multiple usermanagers, each dedicated to their own domain but each communicating with the same Harbourmaster. This setup allows for the most customization since each usermanager can be configured individually (see chapter <a href="Usermanager.html">Usermanager)</a>.</p>
+<p><img src="assets/multiple_domain_overview.png" alt=""></p>
+<p>It is possible to automatically log in users on all SSO domains with one single login action, also known as <strong>cross domain login</strong>. This feature relies on third-party cookies (setting a cookie on a domain which the user is not currently visiting). Some browser block third-party cookies, which is why this feature is not compatible with all browsers.</p>
+<p>This guide aims to provide you with a quick way to set up a local multi usermanager installation. It is assumed that you have followed our <a href="quick-start-guide.html">Quick Start Guide</a> to the point where the Harbourmaster, Usermanager and Controlcenter are all running on your system.</p>
+<h2 id="adding-a-second-usermanager-to-the-quick-start-guide">Adding a second Usermanager to the <a href="quick-start-guide.html">Quick Start Guide</a></h2>
+<p>The Harbourmaster quick start repository comes with the <a href="quickstart/docker-compose-second-domain.yml">docker-compose-second-domain.yml</a> which is pre-configured to add a second Usermanager to the <a href="quick-start-guide.html">Quick Start Guide</a>. This Usermanager will be running under the <code>usermanager.thunder.local</code> domain.</p>
+<p>Stop the docker-compose run from the Quick Start Guide and start it again with providing both docker compose files</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> harbourmaster-docs/quickstart/
+docker-compose <span class="hljs-operator">-f</span> docker-compose.yml <span class="hljs-operator">-f</span> docker-compose-second-domain.yml up
 </code></pre>
 <p><strong>Add /etc/hosts entries</strong></p>
-<p>Create the following entry in your/etc/hosts according to your docker machine ip address, in this example 192.168.99.100.</p>
-<p>Get your docker mashine ip with <code>docker-machine ip</code></p>
-<pre><code class="lang-bash"><span class="hljs-number">192.168</span>.<span class="hljs-number">99.100</span> usermanager.thunder.local www.thunder.local
+<p>Create the following entry in your /etc/hosts file. If the second Usermanager&apos;s Docker container is running non-locally, replace the IP address in this entry accordingly.</p>
+<pre><code class="lang-bash"><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> usermanager.thunder.local www.thunder.local
 </code></pre>
-<h3 id="access-the-applications">Access the applications</h3>
-<h4 id="user-manager">User Manager</h4>
-<p><a href="http://usermanager.thunder.local:90/demo/" target="_blank">http://usermanager.thunder.local:90/demo/</a></p>
-<h4 id="configure-drupal-module">Configure Drupal Module</h4>
-<p>The installation and configuration is described in the chapter <a href="drupalmodule.html">Drupal Module</a></p>
-<p>User for the <strong>URL to usermanager</strong>: <a href="http://usermanager.thunder.local:90" target="_blank">http://usermanager.thunder.local:90</a></p>
-<h2 id="single-usermanger">Single Usermanger</h2>
-<p>due to the missing cross domain login feature in the Freemium Version is this freature not available.</p>
+<h3 id="accessing-the-applications">Accessing the applications</h3>
+<p>To access your second Usermanager, simply point your web browser to <a href="http://usermanager.thunder.local/demo/" target="_blank">http://usermanager.thunder.local/demo/</a>.</p>
+<p>You should now have two Usermanagers running under two different domains: <code>thunder.local</code> and <code>thunder.dev</code>. Both Usermanagers are communicating with the same Harbourmaster, allowing users to log in accross multiple domains.</p>
+<p><em>Note concerning the Drupal Module installation: In the <strong>URL to usermanager</strong> option, use <a href="http://usermanager.thunder.local" target="_blank">http://usermanager.thunder.local</a></em></p>
 
                     
                     </section>
@@ -256,14 +256,20 @@ docker-compose up
         </div>
 
         
-        <a href="./license.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: LICENSE"><i class="fa fa-angle-left"></i></a>
+        <a href="./quick-start-guide.html" class="navigation navigation-prev " aria-label="Previous page: Quick Start Guide"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="./harbourmaster.html" class="navigation navigation-next " aria-label="Next page: Harbourmaster"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
 <script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
 
     
     <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
@@ -283,7 +289,7 @@ docker-compose up
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"ga":{"token":"GTM-5X8W5W","configuration":"auto"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

@@ -2,16 +2,20 @@
 
 ## About
 
-The controlcenter is a web application which provides an administration interface for the Harbourmaster SSO. It is provided as a docker container. https://hub.docker.com/r/valiton/controlcenter/
+The Control Center is a web application which provides an administration interface for the Harbourmaster SSO. It is provided as a docker container. [https://hub.docker.com/r/valiton/controlcenter/](https://hub.docker.com/r/valiton/controlcenter/)
 
 ## Configuration
 
-The necessary configuration of the controlcenter is defined with environment variables.
+The necessary configuration of the Control Center is defined with environment variables.
 
 ```bash
-COOKIE_SECURE=<true|false>     #should set the login cookie only on https
+
+COOKIE_SECURE=<true|false> #should set the login cookie only on https
+
 REDIRECT_TO_HTTPS=<true|false> #should redirect to https
-HARBOURMASTER_API_URL=<harbourmaster_api_base_url_v1>  #Base url of the harbourmaster API inclucding /v1 e.g. http://harbourmaster.thunder.dev:8080/v1
+
+HARBOURMASTER_API_URL=<harbourmaster_api_base_url_v1> #Base URL of the Harbourmaster API including /v1 e.g. http://harbourmaster.thunder.dev:8080/v1. Needs to be accessible by the web browser, so local IPs most likely won't work if the Control Center is running externally.
+
 ```
 
 # Docker run
@@ -19,35 +23,39 @@ HARBOURMASTER_API_URL=<harbourmaster_api_base_url_v1>  #Base url of the harbourm
 The quick start guide provides a preconfigured docker-compose file. [Quick Start Guide](quick-start-guide.md)
 
 ```bash
+
 docker run --name thunder-controlcenter -e COOKIE_SECURE=false -e REDIRECT_TO_HTTPS=false -e HARBOURMASTER_API_URL=http://harbourmaster.thunder.dev:8080/v1 -p 49040:18040 valiton/controlcenter
+
 ```
 
 # Control Center user documentation
 
 ## Login
 
-Login with username/password or with user key and user secret key. The user must have the permission **cc:accessUI**. The admin user created in the seed script has complete permission.
+Log in with username/password or with user key and user secret key. The user must have the permission **cc:accessUI**. The admin user created in the seed script has complete permission.
 
 ![](/assets/controlcenter_login.png)
 
-## Controlcenter Dash Board
+## Control Center Dashboard
 
-On the controlcenter dashboard, select Harbourmaster to manage users.
+On the Control Center dashboard, select Harbourmaster to manage users.
 
 ![](assets/controlcenter_dashboard.png)
 
 ## List Users
 
-The Control Center lists all users in paginated form on the left hand side. The list is searchable.
+The Control Center lists all users function in paginated form on the left hand side. The list is searchable.
 
 ![](assets/controlcenter_list_users.png)
 
 ## User Details
 
-The controlcenter shows all user details when clicking on a user from the list. On the user detail page the following admin actions can be done.
+The Control Center shows all user details when clicking on a user from the list. On the user detail page the following admin actions can be done.
 
 * Change password for the user \(requires knowledge of the user password\)
+
 * Reset password \(assign a new randomly generated password to the user, password will be displayed once\)
+
 * Reset secret key \(assign a new randomly generated secret key to the user, secret key will be displayed once\)
 
 * Edit the user details
@@ -70,12 +78,11 @@ The controlcenter shows all user details when clicking on a user from the list. 
 
 * OAuth Callback Whitelist \(relevant for OAuth API user\)
 
-
 ![](assets/controlcenter_show_user_admin.png)
 
 ## Create new user
 
-The controlcenter create user has less validation than the usermanager widget used by internet users. e.g. the usermanager validates that the login name is not a email address, the controlcenter cannot perform this validation.
+The Control Center create user function has less validation than the usermanager widget used by internet users. e.g. the usermanager validates that the login name is not a email address, the Control Center cannot perform this validation. After a new user has been created, the interface will display a pop-up, which will show that user's secret key which is required for certain API calls.
 
 **Important:** A new user has no default policies and therefore cannot login; you have to add a group to the new user.
 
@@ -83,7 +90,7 @@ The controlcenter create user has less validation than the usermanager widget us
 
 ## List Groups
 
-The controlcenter list all groups.
+The Control Center list all groups function.
 
 ![](/assets/controlcenter_list_group.png)
 
@@ -93,7 +100,7 @@ Create a new group for a tenant. Group names should not contain any whitespaces.
 
 ![](/assets/controlcenter_add_group.png)
 
-## Create new Policy in  Group OR User
+## Create new Policy in Group OR User
 
 Create a new policy. The UI represents the policy statements JSON structure as described in the [Harbourmaster Policies](harbourmaster.md#Policies).
 
@@ -121,9 +128,8 @@ Please note: a new tenant comes with no groups, no policies, no admin user. As a
 
 ## Edit Tenant
 
-The controlcenter allows the editing of a tenant; **please use with caution as **this can break access policies, and API access.
+The Control Center allows the editing of a tenant; **please use with caution **as this can break access policies, and API access.
 
 We do not recommend editing a tenant.
 
 ![](assets/controlcenter_edit_tenant.png)
-
