@@ -6,6 +6,8 @@ Github Link [https://github.com/valiton/harbourmaster-sso-drupal8-plugin](https:
 
 zip to install: [https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip](https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip)
 
+The Module is also on Packagist [https://packagist.org/packages/valiton/harbourmaster](https://packagist.org/packages/valiton/harbourmaster)
+
 Install the module
 ![Install Module](assets/drupal_install_1.png)
 
