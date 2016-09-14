@@ -81,6 +81,8 @@ To access the applications, simply point your web browser to the following URLs:
 
 As described in the [Usermanager](/Usermanager.md) chapter, you can configure an SMTP server to handle user registrations. It is, however, still possible to create users using the usermanager for testing purposes, even without any SMTP configurations.
 
+### Harbourmaster
+
 [http://harbourmaster.thunder.dev](http://harbourmaster.thunder.dev/)
 
 # Configuring the Drupal Module

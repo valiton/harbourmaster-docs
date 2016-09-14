@@ -26,17 +26,19 @@ Some of the main strengths of SSO are:
 
 * Paid content access control \(billing component requires the Valiton product, Tallymann\)
 
-  * CDN/Caching compatibility 
+  * CDN\/Caching compatibility 
 
 
 * iOS SDK \(not available in Freemium\)
 
 * Android SDK \(not available in Freemium\)
 
-* Cross Domain login/logout  \(not available in Freemium\)
+* Cross Domain login\/logout
 
 * Login with Facebook, Twitter, Google Plus et al
+
 * API Driven – all functions can also be accessed by third-party systems via API
+
 * Customer self-service widget  
 
 Valiton’s many years of development experience in [NodeJS ](https://nodejs.org/)was the base on which it implemented the applications in the Harbourmaster SSO and developed a fast and resource-efficient SSO solution as a loosely coupled architecture. Harbourmaster is also the central component for access management of premium content on publishing sites. We can perfectly apply our know-how in the field of online shops and mobile apps into the integration of third party systems.
@@ -53,7 +55,9 @@ The Core component is the [Harbourmaster](harbourmaster.md) it fully API driven.
 
 The user facing component is the Usermanager, the main feature of which is a widget that is embedded in the website and backend, and which sends confirmation emails and communicates with the Harbourmaster.
 
-The Controlcenter gives admin/product manager/call center agents access to all necessary information. Groups and policies allow granular access control.
+The Controlcenter gives admin\/product manager\/call center agents access to all necessary information. Groups and policies allow granular access control.
+
+
 
 # [Quick Start Guide](quick-start-guide.md)
 
