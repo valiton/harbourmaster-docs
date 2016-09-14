@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Quick Start Guide | Harbourmaster Single Sing On (SSO)</title>
+        <title>Quick Start Guide | Harbourmaster Single Sign On (SSO)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -53,7 +53,7 @@
         data-chapter-title="Quick Start Guide"
         data-filepath="quick-start-guide.md"
         data-basepath="."
-        data-revision="Fri Sep 09 2016 15:04:59 GMT+0200 (CEST)"
+        data-revision="Wed Sep 14 2016 09:33:51 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -210,7 +210,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Harbourmaster Single Sing On (SSO)</a>
+        <a href="./" >Harbourmaster Single Sign On (SSO)</a>
     </h1>
 </div>
 
@@ -266,10 +266,10 @@ For an advanced production setup, please refer to the more detailed documentatio
 <p>(username: &quot;admin&quot;, password: &lt;YOUR_INPUT_DURING_SEED&gt; )</p>
 <h3 id="user-manager">User Manager</h3>
 <p><a href="http://usermanager.thunder.dev/demo/" target="_blank">http://usermanager.thunder.dev/demo</a></p>
-<h3 id="harbourmaster">Harbourmaster</h3>
+<p>As described in the <a href="Usermanager.html">Usermanager</a> chapter, you can configure an SMTP server to handle user registrations. It is, however, still possible to create users using the usermanager for testing purposes, even without any SMTP configurations.</p>
 <p><a href="http://harbourmaster.thunder.dev/" target="_blank">http://harbourmaster.thunder.dev</a></p>
 <h1 id="configuring-the-drupal-module">Configuring the Drupal Module</h1>
-<p>For the installation and configuration of the Drupal Module, please refer to the chapter <a href="drupalmodule.html">Drupal Module</a></p>
+<p>For the installation and configuration of the Drupal Module, please refer to the chapter <a href="drupalmodule.html">Drupal Module</a>. Once installed, users will be able to register and log in using <code>&lt;YOUR_DRUPAL_URL&gt;/harbourmaster/login</code>.</p>
 <h1 id="general-outline-for-your-production-setup">General outline for your production setup</h1>
 <p>In this Quick Start Guide, we have provided you with pre-configured docker-compose and *.env files in order to provide you with a working setup easily and quickly.</p>
 <p>When setting up Harbourmaster in a production environment, you should consider starting up each Harbourmaster application container (Harbourmaster, Usermanager and Control Center) individually and providing your own configurations. Please refer to the configuration section of each application to get an overview of how they can be customized and consider using your pre-configured local setup as a reference point.</p>

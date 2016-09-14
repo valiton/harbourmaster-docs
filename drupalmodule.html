@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Drupal Module | Harbourmaster Single Sing On (SSO)</title>
+        <title>Drupal Module | Harbourmaster Single Sign On (SSO)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -53,7 +53,7 @@
         data-chapter-title="Drupal Module"
         data-filepath="drupalmodule.md"
         data-basepath="."
-        data-revision="Fri Sep 09 2016 15:04:59 GMT+0200 (CEST)"
+        data-revision="Wed Sep 14 2016 09:33:51 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -210,7 +210,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Harbourmaster Single Sing On (SSO)</a>
+        <a href="./" >Harbourmaster Single Sign On (SSO)</a>
     </h1>
 </div>
 
@@ -238,7 +238,7 @@
 <li>Configure the module
 <img src="assets/drupal_install_5.png" alt=""></li>
 </ul>
-<p>The Drupal Module needs to be configured to communicate to Harbourmaster API and includes the widget js from the usermanager.</p>
+<p>The Drupal Module needs to be configured to communicate to Harbourmaster the API and includes the widget js from the usermanager. Once the Drupal module has been correctly configured, users will be able to register and log in using <code>&lt;YOUR_DRUPAL_URL&gt;/harbourmaster/login</code>, e.g. <code>www.thunder.dev/harbourmaster/login</code>.</p>
 <p><strong>HMS API CONFIGURATION</strong></p>
 <ul>
 <li><p>URL to Harbourmaster endpoint 
@@ -258,7 +258,7 @@ e.g. &quot;60&quot;</p>
 <p><strong>USERMANAGER CONFIGURATION</strong></p>
 <ul>
 <li>URL to usermanager
-<em>Includes protocol and domain (optionally port and/or path prefix). This Url will be used to load the Usermanger Widget, it is not used for server to server _communication</em>, it is only used by the browser._
+<em>Includes protocol and domain (optionally port and/or path prefix). This Url will be used to load the Usermanger Widget, it is only used by the web browser, not for server to server communication.</em>
 e.g. &quot;<a href="http://usermanager.thunder.dev" target="_blank">http://usermanager.thunder.dev&quot;</a></li>
 </ul>
 <p><strong>HMS TOKEN CONFIGURATION</strong></p>
@@ -274,7 +274,7 @@ e.g. &quot;token&quot;</li>
 <ul>
 <li><p>SSO cookie lifetime
 <em>Duration in seconds in which the cookie stays valid. When set to 0, the cookie will expire after browser close.</em></p>
-<p>e.g. 2592000 (30 dais)</p>
+<p>e.g. 2592000 (30 days)</p>
 </li>
 </ul>
 <p><strong>CROSS DOMAIN AUTHENTICATION CONFIGURATION</strong></p>

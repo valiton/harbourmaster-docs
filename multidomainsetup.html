@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Multi Domain Setup | Harbourmaster Single Sing On (SSO)</title>
+        <title>Multi Domain Setup | Harbourmaster Single Sign On (SSO)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -53,7 +53,7 @@
         data-chapter-title="Multi Domain Setup"
         data-filepath="multidomainsetup.md"
         data-basepath="."
-        data-revision="Fri Sep 09 2016 15:04:59 GMT+0200 (CEST)"
+        data-revision="Wed Sep 14 2016 09:33:51 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -210,7 +210,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Harbourmaster Single Sing On (SSO)</a>
+        <a href="./" >Harbourmaster Single Sign On (SSO)</a>
     </h1>
 </div>
 
@@ -238,6 +238,7 @@ docker-compose <span class="hljs-operator">-f</span> docker-compose.yml <span cl
 <h3 id="accessing-the-applications">Accessing the applications</h3>
 <p>To access your second Usermanager, simply point your web browser to <a href="http://usermanager.thunder.local/demo/" target="_blank">http://usermanager.thunder.local/demo/</a>.</p>
 <p>You should now have two Usermanagers running under two different domains: <code>thunder.local</code> and <code>thunder.dev</code>. Both Usermanagers are communicating with the same Harbourmaster, allowing users to log in accross multiple domains.</p>
+<p>In your production setup, you will have to customize each Usermanager&apos;s configuration. Please refer to the configuration section of the <a href="Usermanager.html">Usermanager</a> chapter, especially regarding the variables <code>SSO_WIDGET_CORS_HTTP_HOSTS</code> and <code>CROSS_DOMAIN_LOGIN_BASE_URL</code>, as these are required to be set according to your setup.</p>
 <p><em>Note concerning the Drupal Module installation: In the <strong>URL to usermanager</strong> option, use <a href="http://usermanager.thunder.local" target="_blank">http://usermanager.thunder.local</a></em></p>
 
                     
