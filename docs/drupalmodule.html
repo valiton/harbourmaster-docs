@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>README | Harbourmaster Single Sign On (SSO)</title>
+        <title>Drupal Module | Harbourmaster Single Sign On (SSO)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="With the Harbourmaster Single Sign On (SSO), Valiton has developed a solution that focuses on the media industry. As part of the Thunder initiative of Hubert Burda Media, the Harbourmaster is available as a ‘Freemium’ version.">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./quick-start-guide.html" />
+    <link rel="next" href="./license.html" />
     
+    
+    <link rel="prev" href="./control-center.html" />
     
 
         
@@ -47,11 +49,11 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="README"
-        data-filepath="README.md"
+        data-level="6"
+        data-chapter-title="Drupal Module"
+        data-filepath="drupalmodule.md"
         data-basepath="."
-        data-revision="Wed Sep 14 2016 18:01:17 GMT+0200 (CEST)"
+        data-revision="Wed Sep 14 2016 18:25:44 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -155,7 +157,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="drupalmodule.html">
+        <li class="chapter active" data-level="6" data-path="drupalmodule.html">
             
                 
                     <a href="./drupalmodule.html">
@@ -218,62 +220,74 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="harbourmaster-single-sign-on-sso">Harbourmaster Single Sign On (SSO)</h1>
-<p>With the Harbourmaster Single Sign On (SSO), <a href="https://valiton.com/" target="_blank">Valiton </a>has developed a solution that focuses on the media industry. As part of the <a href="http://www.thunder.org/" target="_blank">Thunder </a>initiative of Hubert Burda Media, the Harbourmaster is available as a &#x2018;Freemium&#x2019; version.</p>
-<p>Whether for registered users, newsletter subscribers or anonymous users &#x2013; all types of visitors on websites, online shops and apps, Single Sign On is essential for online businesses.</p>
-<p>Thunder comes with built in Drupal User Management, which could be used as long you only need to allow users to login on your website. For your Mobile App, you may have considered registering via Facebook or Twitter.</p>
-<p>With the rapid growth of your online business, and the use of various apps, websites, shops, and landing pages, the need for a Single Sign On solution has now become essential.</p>
-<p>Some of the main strengths of SSO are:</p>
+                        <h1 id="drupal8--thunder">Drupal8 / Thunder</h1>
+<h2 id="install-harbourmaster-sso-plugin">Install Harbourmaster SSO plugin</h2>
+<p>Github Link <a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin</a></p>
+<p>zip to install: <a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip</a></p>
+<p>The Module is also on Packagist <a href="https://packagist.org/packages/valiton/harbourmaster" target="_blank">https://packagist.org/packages/valiton/harbourmaster</a></p>
+<p>Install the module
+<img src="assets/drupal_install_1.png" alt="Install Module"></p>
+<p>Successfully installed
+<img src="assets/drupal_install_2.png" alt="Install Module Success"></p>
+<p>Activate the module
+<img src="assets/drupal_install_3.png" alt="Activate Module"></p>
+<p>Successfully activated
+<img src="assets/drupal_install_4.png" alt="Active Module Success"></p>
+<h2 id="configuration">Configuration</h2>
 <ul>
-<li><p>Private Hosting</p>
-<ul>
-<li>Cloud scaling compatibility </li>
-<li>Hosting friendly by using <a href="https://www.docker.com/" target="_blank">Docker</a> container</li>
+<li>Configure the module
+<img src="assets/drupal_install_5.png" alt=""></li>
 </ul>
-</li>
-<li><p>Multi-tenant (two tenants included in Freemium)</p>
-</li>
-<li><p>Newsletter Management (not available in Freemium)</p>
+<p>The Drupal Module needs to be configured to communicate to Harbourmaster the API and includes the widget js from the usermanager. Once the Drupal module has been correctly configured, users will be able to register and log in using <code>&lt;YOUR_DRUPAL_URL&gt;/harbourmaster/login</code>, e.g. <code>www.thunder.dev/harbourmaster/login</code>.</p>
+<p><strong>HMS API CONFIGURATION</strong></p>
 <ul>
-<li>Subscription status Sync with email service providers (Salesforce Marketing Cloud, Elaine, etc)</li>
-<li>Integration of subscribers&apos; status</li>
-</ul>
+<li><p>URL to Harbourmaster endpoint 
+<em>Includes protocol and domain (optionally port and/or path prefix). This Url is used for server to server communication, it is not used by the browser.</em>
+e.g. &quot;<a href="http://harbourmaster.thunder.dev:8080" target="_blank">http://harbourmaster.thunder.dev:8080&quot;</a>
+Required for the multi domain setup. Note if you user Docker Native for Mac use the IP address of your computer e.g. 192.x.x.x</p>
 </li>
-<li><p>Management of data protection and advertising agreement</p>
+<li><p>Harbourmaster tenant to use
+<em>May only contain a-z A-Z 0-9 .</em>
+e.g. &quot;thunder&quot;</p>
 </li>
-<li><p>Paid content access control (billing component requires the Valiton product, Tallymann)</p>
-<ul>
-<li>CDN\/Caching compatibility </li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>iOS SDK (not available in Freemium)</p>
-</li>
-<li><p>Android SDK (not available in Freemium)</p>
-</li>
-<li><p>Cross Domain login\/logout</p>
-</li>
-<li><p>Login with Facebook, Twitter, Google Plus et al</p>
-</li>
-<li><p>API Driven &#x2013; all functions can also be accessed by third-party systems via API</p>
-</li>
-<li><p>Customer self-service widget  </p>
+<li><p>HMS lookup cache TTL
+<em>Duration during which the HMS session lookup is cached.</em>
+e.g. &quot;60&quot;</p>
 </li>
 </ul>
-<p>Valiton&#x2019;s many years of development experience in <a href="https://nodejs.org/" target="_blank">NodeJS </a>was the base on which it implemented the applications in the Harbourmaster SSO and developed a fast and resource-efficient SSO solution as a loosely coupled architecture. Harbourmaster is also the central component for access management of premium content on publishing sites. We can perfectly apply our know-how in the field of online shops and mobile apps into the integration of third party systems.</p>
-<p>For more information about Harbourmaster SSO please feel free to contact us directly. <a href="mailto:kontakt@valiton.com" target="_blank">kontakt@valiton.com</a></p>
-<h2 id="system-components">System Components</h2>
-<p><img src="assets/system_components.png" alt=""></p>
-<p>The Harbourmaster SSO contains three components in the Freemium version of Thunder. The Freemium version is under the attached LICENSE.</p>
-<p>The Core component is the <a href="harbourmaster.html">Harbourmaster</a> it fully API driven. It manages User Authentication and Authorisation.</p>
-<p>The user facing component is the Usermanager, the main feature of which is a widget that is embedded in the website and backend, and which sends confirmation emails and communicates with the Harbourmaster.</p>
-<p>The Controlcenter gives admin\/product manager\/call center agents access to all necessary information. Groups and policies allow granular access control.</p>
-<h1 id="quick-start-guide"><a href="quick-start-guide.html">Quick Start Guide</a></h1>
-<h1 id="user-manager"><a href="Usermanager.html">User Manager</a></h1>
-<h1 id="control-center"><a href="control-center.html">Control Center</a></h1>
-<h1 id="harbourmaster"><a href="harbourmaster.html">Harbourmaster</a></h1>
-<h1 id="drupal-module"><a href="drupalmodule.html">Drupal Module</a></h1>
+<p><strong>USERMANAGER CONFIGURATION</strong></p>
+<ul>
+<li>URL to usermanager
+<em>Includes protocol and domain (optionally port and/or path prefix). This Url will be used to load the Usermanger Widget, it is only used by the web browser, not for server to server communication.</em>
+e.g. &quot;<a href="http://usermanager.thunder.dev" target="_blank">http://usermanager.thunder.dev&quot;</a></li>
+</ul>
+<p><strong>HMS TOKEN CONFIGURATION</strong></p>
+<ul>
+<li>SSO cookie name
+<em>Name of the cookie that contains the HMS token (usually &quot;token&quot;). May only contain a-z A-Z 0-9 .-\</em>..SSO _
+e.g. &quot;token&quot;</li>
+<li><p>Cookie domain</p>
+<p><em>Name of the domain which the SSO cookie is set on.</em>
+ e.g. &quot;.thunder.dev&quot;</p>
+</li>
+</ul>
+<ul>
+<li><p>SSO cookie lifetime
+<em>Duration in seconds in which the cookie stays valid. When set to 0, the cookie will expire after browser close.</em></p>
+<p>e.g. 2592000 (30 days)</p>
+</li>
+</ul>
+<p><strong>CROSS DOMAIN AUTHENTICATION CONFIGURATION</strong></p>
+<ul>
+<li><p>Cross domain login</p>
+<p><em>Set this path to what the Usermanager uses to authenticate the user with this domain.</em>
+e.g. /hms_cross_domain_login</p>
+</li>
+<li><p>Cross domain logout</p>
+<p><em>Set this path to what the Usermanager uses to invalidate the user&apos;s session with this domain.</em>
+e.g. /hms_cross_domain_logout</p>
+</li>
+</ul>
 
                     
                     </section>
@@ -284,8 +298,10 @@
         </div>
 
         
+        <a href="./control-center.html" class="navigation navigation-prev " aria-label="Previous page: Control Center"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./quick-start-guide.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Quick Start Guide"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./license.html" class="navigation navigation-next " aria-label="Next page: LICENSE"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

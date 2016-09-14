@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Drupal Module | Harbourmaster Single Sign On (SSO)</title>
+        <title>Multi Domain Setup | Harbourmaster Single Sign On (SSO)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./license.html" />
+    <link rel="next" href="./harbourmaster.html" />
     
     
-    <link rel="prev" href="./control-center.html" />
+    <link rel="prev" href="./quick-start-guide.html" />
     
 
         
@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="6"
-        data-chapter-title="Drupal Module"
-        data-filepath="drupalmodule.md"
+        data-level="2"
+        data-chapter-title="Multi Domain Setup"
+        data-filepath="multidomainsetup.md"
         data-basepath="."
-        data-revision="Wed Sep 14 2016 18:01:17 GMT+0200 (CEST)"
+        data-revision="Wed Sep 14 2016 18:25:44 GMT+0200 (CEST)"
         data-innerlanguage="">
     
 
@@ -97,7 +97,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="multidomainsetup.html">
+        <li class="chapter active" data-level="2" data-path="multidomainsetup.html">
             
                 
                     <a href="./multidomainsetup.html">
@@ -157,7 +157,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="drupalmodule.html">
+        <li class="chapter " data-level="6" data-path="drupalmodule.html">
             
                 
                     <a href="./drupalmodule.html">
@@ -220,74 +220,26 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="drupal8--thunder">Drupal8 / Thunder</h1>
-<h2 id="install-harbourmaster-sso-plugin">Install Harbourmaster SSO plugin</h2>
-<p>Github Link <a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin</a></p>
-<p>zip to install: <a href="https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip" target="_blank">https://github.com/valiton/harbourmaster-sso-drupal8-plugin/archive/8.x-1.x.zip</a></p>
-<p>The Module is also on Packagist <a href="https://packagist.org/packages/valiton/harbourmaster" target="_blank">https://packagist.org/packages/valiton/harbourmaster</a></p>
-<p>Install the module
-<img src="assets/drupal_install_1.png" alt="Install Module"></p>
-<p>Successfully installed
-<img src="assets/drupal_install_2.png" alt="Install Module Success"></p>
-<p>Activate the module
-<img src="assets/drupal_install_3.png" alt="Activate Module"></p>
-<p>Successfully activated
-<img src="assets/drupal_install_4.png" alt="Active Module Success"></p>
-<h2 id="configuration">Configuration</h2>
-<ul>
-<li>Configure the module
-<img src="assets/drupal_install_5.png" alt=""></li>
-</ul>
-<p>The Drupal Module needs to be configured to communicate to Harbourmaster the API and includes the widget js from the usermanager. Once the Drupal module has been correctly configured, users will be able to register and log in using <code>&lt;YOUR_DRUPAL_URL&gt;/harbourmaster/login</code>, e.g. <code>www.thunder.dev/harbourmaster/login</code>.</p>
-<p><strong>HMS API CONFIGURATION</strong></p>
-<ul>
-<li><p>URL to Harbourmaster endpoint 
-<em>Includes protocol and domain (optionally port and/or path prefix). This Url is used for server to server communication, it is not used by the browser.</em>
-e.g. &quot;<a href="http://harbourmaster.thunder.dev:8080" target="_blank">http://harbourmaster.thunder.dev:8080&quot;</a>
-Required for the multi domain setup. Note if you user Docker Native for Mac use the IP address of your computer e.g. 192.x.x.x</p>
-</li>
-<li><p>Harbourmaster tenant to use
-<em>May only contain a-z A-Z 0-9 .</em>
-e.g. &quot;thunder&quot;</p>
-</li>
-<li><p>HMS lookup cache TTL
-<em>Duration during which the HMS session lookup is cached.</em>
-e.g. &quot;60&quot;</p>
-</li>
-</ul>
-<p><strong>USERMANAGER CONFIGURATION</strong></p>
-<ul>
-<li>URL to usermanager
-<em>Includes protocol and domain (optionally port and/or path prefix). This Url will be used to load the Usermanger Widget, it is only used by the web browser, not for server to server communication.</em>
-e.g. &quot;<a href="http://usermanager.thunder.dev" target="_blank">http://usermanager.thunder.dev&quot;</a></li>
-</ul>
-<p><strong>HMS TOKEN CONFIGURATION</strong></p>
-<ul>
-<li>SSO cookie name
-<em>Name of the cookie that contains the HMS token (usually &quot;token&quot;). May only contain a-z A-Z 0-9 .-\</em>..SSO _
-e.g. &quot;token&quot;</li>
-<li><p>Cookie domain</p>
-<p><em>Name of the domain which the SSO cookie is set on.</em>
- e.g. &quot;.thunder.dev&quot;</p>
-</li>
-</ul>
-<ul>
-<li><p>SSO cookie lifetime
-<em>Duration in seconds in which the cookie stays valid. When set to 0, the cookie will expire after browser close.</em></p>
-<p>e.g. 2592000 (30 days)</p>
-</li>
-</ul>
-<p><strong>CROSS DOMAIN AUTHENTICATION CONFIGURATION</strong></p>
-<ul>
-<li><p>Cross domain login</p>
-<p><em>Set this path to what the Usermanager uses to authenticate the user with this domain.</em>
-e.g. /hms_cross_domain_login</p>
-</li>
-<li><p>Cross domain logout</p>
-<p><em>Set this path to what the Usermanager uses to invalidate the user&apos;s session with this domain.</em>
-e.g. /hms_cross_domain_logout</p>
-</li>
-</ul>
+                        <h1 id="quick-start-guide-multi-domain-setup"><a href="quick-start-guide.html">Quick Start Guide</a> Multi Domain Setup</h1>
+<p>With Harbourmaster it is possible allow users to login with the same username and password on multiple top level domains e.g. <code>tunder.dev</code> and <code>thunder.local</code>. This requires to set up multiple usermanagers, each dedicated to their own domain but each communicating with the same Harbourmaster. This setup allows for the most customization since each usermanager can be configured individually (see chapter <a href="Usermanager.html">Usermanager)</a>.</p>
+<p><img src="assets/multiple_domain_overview.png" alt=""></p>
+<p>It is possible to automatically log in users on all SSO domains with one single login action, also known as <strong>cross domain login</strong>. This feature relies on third-party cookies (setting a cookie on a domain which the user is not currently visiting). Some browser block third-party cookies, which is why this feature is not compatible with all browsers.</p>
+<p>This guide aims to provide you with a quick way to set up a local multi usermanager installation. It is assumed that you have followed our <a href="quick-start-guide.html">Quick Start Guide</a> to the point where the Harbourmaster, Usermanager and Controlcenter are all running on your system.</p>
+<h2 id="adding-a-second-usermanager-to-the-quick-start-guide">Adding a second Usermanager to the <a href="quick-start-guide.html">Quick Start Guide</a></h2>
+<p>The Harbourmaster quick start repository comes with the <a href="quickstart/docker-compose-second-domain.yml">docker-compose-second-domain.yml</a> which is pre-configured to add a second Usermanager to the <a href="quick-start-guide.html">Quick Start Guide</a>. This Usermanager will be running under the <code>usermanager.thunder.local</code> domain.</p>
+<p>Stop the docker-compose run from the Quick Start Guide and start it again with providing both docker compose files</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> harbourmaster-docs/quickstart/
+docker-compose <span class="hljs-operator">-f</span> docker-compose.yml <span class="hljs-operator">-f</span> docker-compose-second-domain.yml up
+</code></pre>
+<p><strong>Add /etc/hosts entries</strong></p>
+<p>Create the following entry in your /etc/hosts file. If the second Usermanager&apos;s Docker container is running non-locally, replace the IP address in this entry accordingly.</p>
+<pre><code class="lang-bash"><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> usermanager.thunder.local www.thunder.local
+</code></pre>
+<h3 id="accessing-the-applications">Accessing the applications</h3>
+<p>To access your second Usermanager, simply point your web browser to <a href="http://usermanager.thunder.local/demo/" target="_blank">http://usermanager.thunder.local/demo/</a>.</p>
+<p>You should now have two Usermanagers running under two different domains: <code>thunder.local</code> and <code>thunder.dev</code>. Both Usermanagers are communicating with the same Harbourmaster, allowing users to log in accross multiple domains.</p>
+<p>In your production setup, you will have to customize each Usermanager&apos;s configuration. Please refer to the configuration section of the <a href="Usermanager.html">Usermanager</a> chapter, especially regarding the variables <code>SSO_WIDGET_CORS_HTTP_HOSTS</code> and <code>CROSS_DOMAIN_LOGIN_BASE_URL</code>, as these are required to be set according to your setup.</p>
+<p><em>Note concerning the Drupal Module installation: In the <strong>URL to usermanager</strong> option, use <a href="http://usermanager.thunder.local" target="_blank">http://usermanager.thunder.local</a></em></p>
 
                     
                     </section>
@@ -298,10 +250,10 @@ e.g. /hms_cross_domain_logout</p>
         </div>
 
         
-        <a href="./control-center.html" class="navigation navigation-prev " aria-label="Previous page: Control Center"><i class="fa fa-angle-left"></i></a>
+        <a href="./quick-start-guide.html" class="navigation navigation-prev " aria-label="Previous page: Quick Start Guide"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./license.html" class="navigation navigation-next " aria-label="Next page: LICENSE"><i class="fa fa-angle-right"></i></a>
+        <a href="./harbourmaster.html" class="navigation navigation-next " aria-label="Next page: Harbourmaster"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
