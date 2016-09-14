@@ -79,13 +79,13 @@ To access the applications, simply point your web browser to the following URLs:
 
 [http://usermanager.thunder.dev/demo](http://usermanager.thunder.dev/demo/)
 
-### Harbourmaster
+As described in the [Usermanager](/Usermanager.md) chapter, you can configure an SMTP server to handle user registrations. It is, however, still possible to create users using the usermanager for testing purposes, even without any SMTP configurations.
 
 [http://harbourmaster.thunder.dev](http://harbourmaster.thunder.dev/)
 
 # Configuring the Drupal Module
 
-For the installation and configuration of the Drupal Module, please refer to the chapter [Drupal Module](drupalmodule.md)
+For the installation and configuration of the Drupal Module, please refer to the chapter [Drupal Module](drupalmodule.md). Once installed, users will be able to register and log in using `<YOUR_DRUPAL_URL>/harbourmaster/login`.
 
 # General outline for your production setup
 

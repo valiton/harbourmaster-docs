@@ -33,5 +33,7 @@ To access your second Usermanager, simply point your web browser to [http://user
 
 You should now have two Usermanagers running under two different domains: `thunder.local` and `thunder.dev`. Both Usermanagers are communicating with the same Harbourmaster, allowing users to log in accross multiple domains.
 
+In your production setup, you will have to customize each Usermanager's configuration. Please refer to the configuration section of the [Usermanager](/Usermanager.md) chapter, especially regarding the variables `SSO_WIDGET_CORS_HTTP_HOSTS` and `CROSS_DOMAIN_LOGIN_BASE_URL`, as these are required to be set according to your setup.
+
 _Note concerning the Drupal Module installation: In the **URL to usermanager** option, use [http://usermanager.thunder.local](http://usermanager.thunder.local)_
 

@@ -1,4 +1,4 @@
-# Harbourmaster Single Sing On \(SSO\)
+# Harbourmaster Single Sign On \(SSO\)
 
 With the Harbourmaster Single Sign On \(SSO\), [Valiton ](https://valiton.com/)has developed a solution that focuses on the media industry. As part of the [Thunder ](http://www.thunder.org/)initiative of Hubert Burda Media, the Harbourmaster is available as a ‘Freemium’ version.
 

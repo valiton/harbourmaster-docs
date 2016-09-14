@@ -25,7 +25,7 @@ Successfully activated
 * Configure the module
   ![](assets/drupal_install_5.png)
 
-The Drupal Module needs to be configured to communicate to Harbourmaster API and includes the widget js from the usermanager.
+The Drupal Module needs to be configured to communicate to Harbourmaster the API and includes the widget js from the usermanager. Once the Drupal module has been correctly configured, users will be able to register and log in using `<YOUR_DRUPAL_URL>/harbourmaster/login`, e.g. `www.thunder.dev/harbourmaster/login`.
 
 **HMS API CONFIGURATION**
 
@@ -46,7 +46,7 @@ The Drupal Module needs to be configured to communicate to Harbourmaster API and
 **USERMANAGER CONFIGURATION**
 
 * URL to usermanager
-  _Includes protocol and domain \(optionally port and/or path prefix\). This Url will be used to load the Usermanger Widget, it is not used for server to server \_communication_, it is only used by the browser.\_
+  _Includes protocol and domain \(optionally port and/or path prefix\). This Url will be used to load the Usermanger Widget, it is only used by the web browser, not for server to server communication._
   e.g. "[http://usermanager.thunder.dev"](http://usermanager.thunder.dev)
 
 **HMS TOKEN CONFIGURATION**
@@ -63,7 +63,7 @@ The Drupal Module needs to be configured to communicate to Harbourmaster API and
 * SSO cookie lifetime
   _Duration in seconds in which the cookie stays valid. When set to 0, the cookie will expire after browser close._
 
-  e.g. 2592000 \(30 dais\)
+  e.g. 2592000 \(30 days\)
 
 
 **CROSS DOMAIN AUTHENTICATION CONFIGURATION**
