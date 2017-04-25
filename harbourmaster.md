@@ -1,8 +1,8 @@
-# Harbourmater
+# Harbourmaster
 
 ## About
 
-The Harbourmaster application is the backbone of the Harbourmaster SSO. It provides the API which powers all other applications.
+The Harbourmaster application is the backbone of the Harbourmaster SSO. It provides the API which powers all other applications.  
 [https://hub.docker.com/r/valiton/harbourmaster/](https://hub.docker.com/r/valiton/harbourmaster/)
 
 Its main API is the REST API, which contains a full documentation with Swagger: [http://YOUR\_HARBOURMASTER\_URL/docs](http://YOUR_HARBOURMASTER_URL/docs)
@@ -45,7 +45,6 @@ Simple command to view just the license and dont run all the containers
 
 ```bash
 docker run -e LICENSE=view valiton/harbourmaster
-
 ```
 
 ## Configuration
@@ -66,8 +65,6 @@ MONGO_PORT_27017_TCP_PORT=<prot of mongodb> #compatible with docker link mongo
 HARBOURMASTER_TENANT=<teante name > e.g. thunder
 USERMANAGER_HMS_USER_KEY=<usermanager key| 20 char hex format> e.g.  32be04fb9495229f3e4f
 USERMANAGER_HMS_USER_SECRET_KEY=<usermanager secret key random string> e.g. 58c94af9f955eebebaf81195d57f774fe7a9d834efd519c8588d184914ff
-
-
 ```
 
 ## Docker run
@@ -156,7 +153,6 @@ A Policy consists of one or many statements, which are structured as follows:
 * **Resource**: the resource which is affected by the action; get converted in a regular expression
   * Special Resource **\[currentUser\] **access is only granted to the resource owned by the accessing user
 
-
 ### Policy Example
 
 **Full access** to all actions on all resource in all tenants:
@@ -179,8 +175,7 @@ A Policy consists of one or many statements, which are structured as follows:
  { "Tenant": "thunder", "Effect": "Allow", "Action": "hms:listUserEntitlements", "Resource": "[currentUser]" },
  { "Tenant": "thunder", "Effect": "Allow", "Action": "hms:listAllowedTenants", "Resource": "[currentUser]" }
 ]}
-
-
-
 ```
+
+
 
